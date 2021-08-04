@@ -1,7 +1,7 @@
 ---
 title: "Markdown でコードを書く"
 author: "Satoshi Nakagawa"
-...
+---
 
 # いくつかの例
 
