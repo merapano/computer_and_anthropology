@@ -1,5 +1,5 @@
 ---
-title:  "Markdown でコードを書く"
+title: "Markdown でコードを書く"
 author: "Satoshi Nakagawa"
 ...
 
