@@ -1,10 +1,11 @@
-<!-- -*- coding: utf-8; mode: markdown -*- -->
+---
+title:  "Markdown でコードを書く"
+author: "Satoshi Nakagawa"
+...
 
-Markdown でコードを書く
+# いくつかの例
 
-[[!meta title="Markdown でコードを書く"]]
-[[!meta author="Satoshi Nakagawa"]]
-[[!toc levels=1]]
+## Perl
 
 最初は perl を示そう。
 
@@ -30,6 +31,8 @@ GetOptions(
 'type=s'        => \$type
 
 ```
+
+## Dot
 
 つぎは graphviz の dot 言語である。
 
@@ -73,13 +76,18 @@ GetOptions(
 
 ```
 
+## Bash
+
 最後は terminal の bash である。
 
 ```bash
     git clone URL/foo.git
     cd foo
     git remote set-url origin URL
+
 ```
+
+むむむ。
 
 
 
