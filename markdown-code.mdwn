@@ -6,6 +6,7 @@ Markdown でコードを書く
 [[!meta author="Satoshi Nakagawa"]]
 [[!toc levels=1]]
 
+最初は perl を示そう。
 
 ```perl
 use Getopt::Long 'GetOptions';
@@ -27,6 +28,10 @@ GetOptions(
 
 # 文字列
 'type=s'        => \$type
+
+```
+
+つぎは graphviz の dot 言語である。
 
 ```dot
 
@@ -67,6 +72,8 @@ GetOptions(
      }
 
 ```
+
+最後は terminal の bash である。
 
 ```bash
     git clone URL/foo.git
