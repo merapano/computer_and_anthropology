@@ -6,8 +6,6 @@ date:
 - updated: [2021-08-07]
 ---
 
-[HTML](docs/intro.html)
-
 # はじめに
 
 文化人類学でコンピューターをつかう方法を伝授します。
@@ -21,8 +19,6 @@ Apple はもっての他です。
 その中でももっとも使い易い 
 [Linux](https://ja.wikipedia.org/wiki/Linux) を使用します。
 
-[^appl]: 「アップル」の名前は、わたしの前では口にしないように。
-  敵です。
 
 # コンピューター
 
@@ -73,9 +69,47 @@ Chromebook のセットアップが出来ないひとは、
 # Crostini を有効にする
 
 さて、セットアップが終わりました。
-（たぶん右下にある）シェルフから
+シェルフ（たぶん右下にある）から「設定」（Settings）を
+選びます。
+下のほうにある Advanced をクリックして、
+さらなる選択肢が表示されます。
+"Developer" (Linux Develpment Environment) をクリックします。
+
+30分くらいで Linux (Debian) が起動します。
+
+この間に腹をすえてください。
+「もうマウスは使いません」、
+「これからは基本的にコマンドラインで生きてゆく
+のだ」と唱えてください。
+
+<!-- BEGIN:LIST -->
+
+★ これからのわたし
+
+- マウスは使いません！
+- コマンドラインで生きていきます
+
+<!-- END:LIST -->
+
+# Debian の設定
+
+さて、
+まずは人類学のために
+最低限のパッケージをインストールしましょう。
+PC Unix では root ユーザーだけが
+パッケージのインストールができます。
+（あなたは user として foo を選んだことにしま
+しょう）
+root のふりをするコマンドがあります ---
+`sudo` です。
+`sudo command --option` と
+
+
+
 
 # References
+
+[^appl]: 「アップル」の名前は、わたしの前では口にしないように。Apple は敵です。
 
 [^antiapple]: Chromebook では 
   Android のアプリが使用可能です。
@@ -89,6 +123,6 @@ Chromebook のセットアップが出来ないひとは、
   それでも月々500円程度（1000円以下）です。
   
 [^giveup]: 「どうしても」という方は、たとえば：
-  [Chromebook を設定する](https://support.google.com/chromebook/answer/1047362?hl=ja)
+  （公式ページ）[Chromebook を設定する](https://support.google.com/chromebook/answer/1047362?hl=ja)
   などを参考にしてください。
   
