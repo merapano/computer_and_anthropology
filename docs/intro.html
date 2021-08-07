@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Satoshi Nakagawa" />
+  <title>準備する</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">準備する</h1>
+<p class="author">Satoshi Nakagawa</p>
+<p class="date">true</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#はじめに">1. はじめに</a></li>
+<li><a href="#コンピューター">2. コンピューター</a></li>
+<li><a href="#chromebook-をセットアップする">Chromebook をセットアップする</a></li>
+<li><a href="#crostini-を有効にする">Crostini を有効にする</a></li>
+<li><a href="#references">3. References</a></li>
+</ul>
+</nav>
+<h1 id="はじめに">1. はじめに</h1>
+<p>文化人類学でコンピューターをつかう方法を伝授します。</p>
+<p>この講義では、準備すべきモノを紹介します。</p>
+<p>まず、Windows はつかいません。 Apple はもっての他です。 [^app] <a href="https://ja.wikipedia.org/wiki/PC-UNIX#:~:text=PC%2DUNIX%E3%81%A8%E3%81%AF%E3%80%81%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3,%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E7%B7%8F%E7%A7%B0%E3%81%A7%E3%81%82%E3%82%8B%E3%80%82&amp;text=PC9800%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E7%94%A8%E3%81%AEPC,%E3%81%AE%E3%82%82%E3%81%AE%E3%82%82%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%80%82">PC Unix</a> をつかいます。 その中でももっとも使い易い <a href="https://ja.wikipedia.org/wiki/Linux">Linux</a> を使用します。</p>
+<h1 id="コンピューター">2. コンピューター</h1>
+<p>Windows マシンに Linux をインストールするのは、 いまではとても簡単になりました。 しかしながら、それでも、まだまだつまづくことがあるようです。</p>
+<p>ここでは現在、 リナックスをインストールする最も簡単な方法である、 <a href="https://ja.wikipedia.org/wiki/Chromebook">Chromebook</a> を つかうという方法を採用します。 メモリーが4ギガ以上 （できれば8 ギガバイト） HDD が128 ギガバイト以上のものを選んでください。</p>
+<p>上の条件を満たすものなら何でもいいです。 安いものでけっこうです。 2021-08 の時点では Lenovo の <a href="https://www.lenovo.com/jp/ja/notebooks/ideapad/duet-3-series/Lenovo-CT-X636/p/ZZICZCTCT1X">Ideapad Duet Chromebook</a> あるいは ASUS の <a href="https://www.asus.com/jp/Laptops/For-Home/Chromebook/ASUS-Chromebook-Detachable-CM3-CM3000/">CM3</a> が5万円以下で手に入れることができます。 二つともに小さい10インチサイズのコンピューターです。 Linux 移動が挫折した時のことを考えると、 このサイズは魅力です。 挫折の証拠が目立ちません。</p>
+<p><img src="https://www.lenovo.com/medias/lenovo-tablet-ideapad-duet-chromebook-feature-2.jpg?context=bWFzdGVyfHJvb3R8MjIwOTQyfGltYWdlL2pwZWd8aDA2L2g5Ny8xMDgxMjU1MjgwNjQzMC5qcGd8ZmMxMGY2MjRkNjMyYjQwMjkyMWIxODc0YWUxMjk2NTY3NjM3ZGJjODBlNTI1ZmNiY2FmNWVhMGRkYTgxZTgwZQ&amp;w=1920" alt="Lenovo Duet" style="width:40.0%" /> <img src="https://drh.img.digitalriver.com/DRHM/Storefront/Site/asusjp/pb/images/webasset/pc/CM3000-HT0019/CM3_4_WA.jpg" alt="ASUS CM3" style="width:40.0%" /></p>
+<p>お金がかかるのはこれだけです。<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> あとは時間と忍耐力です。</p>
+<h1 id="chromebook-をセットアップする">Chromebook をセットアップする</h1>
+<p>Chromebook を使うには、 Google のアカウントをもっていなければなりません。 ここではあなたのアカウント／メールアドレスを <code>foo@gmail.com</code> とします。<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+<p>まず、買ってきた Chromebook を自分のアカウントを つかってセットアップします。 Chromebook のセットアップが出来ないひとは、 ここで諦めましょう。<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<h1 id="crostini-を有効にする">Crostini を有効にする</h1>
+<p>さて、セットアップが終わりました。 （たぶん右下にある）シェルフから</p>
+<h1 id="references">3. References</h1>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>後日、すべて順調にいった方は、 自分用のサーバーを契約したくなるかもしれません。 それでも月々500円程度（1000円以下）です。<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Chromebook では Android のアプリが使用可能です。 その他、いろんな意味で ChromeOS は Android との共同作業を前提として 作られています。 いまでも遅くありません、iPhone は捨てましょう。<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>「どうしても」という方は、たとえば： <a href="https://support.google.com/chromebook/answer/1047362?hl=ja">Chromebook を設定する</a> などを参考にしてください。<a href="#fnref3" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>
