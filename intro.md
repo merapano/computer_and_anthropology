@@ -50,7 +50,7 @@ Linux 移動が挫折した時のことを考えると、
 挫折の証拠が目立ちません。
 
 ![Lenovo Duet](https://www.lenovo.com/medias/lenovo-tablet-ideapad-duet-chromebook-feature-2.jpg?context=bWFzdGVyfHJvb3R8MjIwOTQyfGltYWdlL2pwZWd8aDA2L2g5Ny8xMDgxMjU1MjgwNjQzMC5qcGd8ZmMxMGY2MjRkNjMyYjQwMjkyMWIxODc0YWUxMjk2NTY3NjM3ZGJjODBlNTI1ZmNiY2FmNWVhMGRkYTgxZTgwZQ&w=1920){width=40%}
-![ASUS CM3](https://drh2.img.digitalriver.com/DRHM/Storefront/Company/asusjp/images/product/detail/21Q1_CM3000DVA/CM3_48_pen.jpg){width=40%}
+![ASUS CM3](https://drh.img.digitalriver.com/DRHM/Storefront/Site/asusjp/pb/images/webasset/pc/CM3000-HT0019/CM3_4_WA.jpg){width=40%}
 
 お金がかかるのはこれだけです。
 [^mon]
