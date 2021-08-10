@@ -102,9 +102,9 @@ PC Unix では root ユーザーだけが
 しょう）
 root のふりをするコマンドがあります ---
 `sudo` です。
-`sudo command --option` と
-
-
+`sudo command --option` で、
+root で `command --option` と打ったのと
+同じこうかを得ることができます。
 
 
 # References
