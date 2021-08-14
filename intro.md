@@ -1,9 +1,9 @@
 ---       
 title: "準備する"
 author: "Satoshi Nakagawa"
-date:
-- created: [2021-08-07]
-- updated: [2021-08-07]
+
+documentclass: ltjarticle
+paper: a5
 ---
 
 # はじめに
@@ -12,13 +12,18 @@ date:
 
 この講義では、準備すべきモノを紹介します。
 
-まず、Windows はつかいません。
+Windows はつかいません。
 Apple はもっての他です。
-[^app]
+[^appl]
 [PC Unix](https://ja.wikipedia.org/wiki/PC-UNIX#:~:text=PC%2DUNIX%E3%81%A8%E3%81%AF%E3%80%81%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3,%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E7%B7%8F%E7%A7%B0%E3%81%A7%E3%81%82%E3%82%8B%E3%80%82&text=PC9800%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E7%94%A8%E3%81%AEPC,%E3%81%AE%E3%82%82%E3%81%AE%E3%82%82%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%80%82) をつかいます。
 その中でももっとも使い易い 
 [Linux](https://ja.wikipedia.org/wiki/Linux) を使用します。
 
+[^appl]: 現在 アップルの OS は Unix 流れですが、だからといって
+    彼らの邪悪さが許されるわけではありません；アップルは敵です。
+    それに対して、MS はこのころとてもいい会社になってきたように思います。
+    Github を買収したときは心配しましたが、
+    その後の彼らの Github への対処はすばらしいと思います。
 
 # コンピューター
 
@@ -108,8 +113,6 @@ root で `command --option` と打ったのと
 
 
 # References
-
-[^appl]: 「アップル」の名前は、わたしの前では口にしないように。Apple は敵です。
 
 [^antiapple]: Chromebook では 
   Android のアプリが使用可能です。
