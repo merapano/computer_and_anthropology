@@ -17,9 +17,6 @@ paper: a5
 
 まず、Windows はつかいません。
 Apple [^appl] はもっての他です。
-Windows はつかいません。
-Apple はもっての他です。
-[^appl]
 [PC Unix](https://ja.wikipedia.org/wiki/PC-UNIX#:~:text=PC%2DUNIX%E3%81%A8%E3%81%AF%E3%80%81%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3,%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E7%B7%8F%E7%A7%B0%E3%81%A7%E3%81%82%E3%82%8B%E3%80%82&text=PC9800%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA%E7%94%A8%E3%81%AEPC,%E3%81%AE%E3%82%82%E3%81%AE%E3%82%82%E5%AD%98%E5%9C%A8%E3%81%99%E3%82%8B%E3%80%82) をつかいます。
 PC Unix の中でももっとも使い易い 
 [Linux](https://ja.wikipedia.org/wiki/Linux) を使用します。
