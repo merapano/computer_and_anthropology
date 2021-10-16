@@ -3,7 +3,6 @@ title: チームで使う Github（オーナー編）
 author: Satoshi Nakagawa
 ---
 
-
 # 序
 
 リポジトリは private にする。
