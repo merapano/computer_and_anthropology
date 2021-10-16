@@ -1,8 +1,8 @@
-チームで使う Github（オーナー編）
+---
+title: チームで使う Github（オーナー編）
+author: Satoshi Nakagawa
+---
 
-[[!meta title="チームで使う Github"]]
-[[!meta author="Satoshi Nakagawa"]]
-[[!toc levels=2]]
 
 # 序
 

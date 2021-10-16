@@ -1,9 +1,7 @@
-チームで使う Github（メンバー編）
-
-[[!meta title="Github 開発のメンバーのやること"]]
-[[!meta author="Satoshi Nakagawa"]]
-[[!toc levels=1]]
-
+---
+title: チームで使う Github（メンバー編）
+author: Satoshi Nakagawa
+---
 
 # 序
 
@@ -44,7 +42,7 @@
 `https:github.com/foo/baz` がじっさいの URL となる。
 このリポジトリにアクセスする。
 
-[[!img pict/github-screen-1.jpg size=500x]]
+![](pict/github-screen-1.jpg){width=70%}
 
 コラボレーターなので、
 この画面で作業ができる。
