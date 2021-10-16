@@ -9,3 +9,7 @@ author: Satoshi Nakagawa
 - [リポジトリをつくる](git.md) --- Github にリポジトリをつくります
 - [マークダウン](markdown.md) --- マークダウン記法で論文を書きます
 - [Emacs をつかいこなす](emacs.md) --- Emacs をつかいこなします
+- [リポジトリで共同作業をする（オーナー編）](github-owner.md)
+- [リポジトリで共同作業をする（メンバー編）](github-member.md)
+
+
