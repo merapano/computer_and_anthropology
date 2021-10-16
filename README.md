@@ -1,1 +1,6 @@
-# computer_and_anthropology
+---
+title: README
+author: "Satoshi Nakagawa"
+---
+
+- [はじめに](intro.md)
