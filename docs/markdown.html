@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Satoshi Nakagawa" />
+  <title>Markdown で文章を書く</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <style type="text/css">
+
+
+h1 {
+border-left: 8px ridge #000000;
+border-bottom: 4px ridge #000000;
+}
+h2 {
+border-left: 6px solid #000000;
+}
+h3 {
+border-left: 6px double #000000;
+}
+
+
+p, li, code, table {
+font-family: monospace;
+word-break: break-all;
+}
+
+p {
+text-align: justify;
+}
+
+p {
+text-indent: 1em;
+}
+
+strong {
+text-decoration: underline;
+}
+
+.box3 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #2c2c2f;
+background: #cde4ff;  }
+.box3 p {
+margin: 0; padding: 0;
+}
+.box8 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+.box8 p {
+margin: 0; padding: 0;
+}
+.box27 {
+position: relative;
+margin: 2em 0;
+padding: 0.5em 1em;
+border: solid 3px #62c1ce;
+}
+.box27 .box-title {
+position: absolute;
+display: inline-block;
+top: -27px;
+left: -3px;
+padding: 0 9px;
+height: 25px;
+line-height: 25px;
+font-size: 17px;
+background: #62c1ce;
+color: #ffffff;
+font-weight: bold;
+border-radius: 5px 5px 0 0;
+}
+.box27 p {
+margin: 0; padding: 0;
+}
+</style>
+</head>
+<body>
+<header>
+<h1 class="title">Markdown で文章を書く</h1>
+<p class="author">Satoshi Nakagawa</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#はじめに"><span class="toc-section-number">1</span> 1. はじめに</a></li>
+<li><a href="#分間入門"><span class="toc-section-number">2</span> 2. 5分間入門</a></li>
+</ul>
+</nav>
+<h1 id="はじめに"><span class="header-section-number">1</span> 1. はじめに</h1>
+<p>M$Word は捨てなさい！ 商用の契約にしばられた ファイル形式ではなく、 世界に開かれたプレインテキストを使いましょう。</p>
+<p>そして <strong>Markdown</strong> 記法を使いましょう。 とっても簡単です。</p>
+<p>いまは使う人はすくないかもしれませんが、 初期のころの email で使われた記法があります。 コトバの前後を <code>*</code> でかこんで強調したり、 前後を <code>_</code> でかこんで、そのコトバに下線があることを 示唆したりしました。 この記法を発展させたのが <code>markdown</code> 記法<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> です。</p>
+<h1 id="分間入門"><span class="header-section-number">2</span> 2. 5分間入門</h1>
+<p>お好きな<a href="editor.html">エディタ</a> をつかってください。 ファイルを作成しましょう — <code>bar.md</code><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> （名前はなんでもいいです）<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> という名前とします。</p>
+<h2 id="タイトルと構成"><span class="header-section-number">2.1</span> 2.1 タイトルと構成</h2>
+<p>まずはタイトルを書きましょう。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb1-1" title="1">---</a>
+<a class="sourceLine" id="cb1-2" title="2">title: 人類学を自然化する</a>
+<a class="sourceLine" id="cb1-3" title="3">subtitle: ミリカンの誤解</a>
+<a class="sourceLine" id="cb1-4" title="4">author: Satoshi Nakagawa</a>
+<a class="sourceLine" id="cb1-5" title="5">---</a></code></pre></div>
+<p>つぎに、だいたいの枠組をつくってしまいましょう。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb2-1" title="1"></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="fu"># \S 3. 序</span></a>
+<a class="sourceLine" id="cb2-3" title="3"></a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="fu"># \S 4. ミリカンの哲学</span></a>
+<a class="sourceLine" id="cb2-5" title="5"></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="fu">## 4.1 ミリカンはだれか</span></a>
+<a class="sourceLine" id="cb2-7" title="7"></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="fu">## 4.2 ミリカンの哲学</span></a>
+<a class="sourceLine" id="cb2-9" title="9"></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="fu"># \S 5. ミリカンと人類学</span></a>
+<a class="sourceLine" id="cb2-11" title="11"></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="fu">## 5.1 ANTという人類学</span></a>
+<a class="sourceLine" id="cb2-13" title="13"></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="fu">## 5.2 どうしたこうした</span></a>
+<a class="sourceLine" id="cb2-15" title="15"></a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="fu"># \S 6. 結論</span></a>
+<a class="sourceLine" id="cb2-17" title="17"></a>
+<a class="sourceLine" id="cb2-18" title="18"><span class="fu"># \S 7. 参考文献</span></a>
+<a class="sourceLine" id="cb2-19" title="19"></a></code></pre></div>
+<p>できあがったバージョンでは、 <code>#</code> は章、 <code>##</code> は節、 <code>###</code> は小節として表示されます。</p>
+<h2 id="文字飾り"><span class="header-section-number">2.2</span> 7.1 文字飾り</h2>
+<p>それではさっそく書いていきましょう。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" title="1"></a>
+<a class="sourceLine" id="cb3-2" title="2"></a>
+<a class="sourceLine" id="cb3-3" title="3">この論文の目的は、</a>
+<a class="sourceLine" id="cb3-4" title="4">ルース・ミリカンの自然主義的哲学を</a>
+<a class="sourceLine" id="cb3-5" title="5">人類学に応用する仕方を議論する。</a>
+<a class="sourceLine" id="cb3-6" title="6"></a>
+<a class="sourceLine" id="cb3-7" title="7">わたしが「人類学」ということばで意味するのは、</a>
+<a class="sourceLine" id="cb3-8" title="8">たとえば</a>
+<a class="sourceLine" id="cb3-9" title="9">E.E. Evans-Pritchard の *The Nuer&quot;</a>
+<a class="sourceLine" id="cb3-10" title="10">であり、</a>
+<a class="sourceLine" id="cb3-11" title="11">E. R. Leach の *Political Systems of Highland Burma*</a>
+<a class="sourceLine" id="cb3-12" title="12">なのだ。</a>
+<a class="sourceLine" id="cb3-13" title="13"></a>
+<a class="sourceLine" id="cb3-14" title="14">一つの段落の中の改行は無視されます。</a>
+<a class="sourceLine" id="cb3-15" title="15">そして、文字の装飾も簡単です。</a>
+<a class="sourceLine" id="cb3-16" title="16">***ボールド*** もできますし、</a>
+<a class="sourceLine" id="cb3-17" title="17">*イタリック* も簡単です。</a>
+<a class="sourceLine" id="cb3-18" title="18">~打ちけし線~ もできます</a>
+<a class="sourceLine" id="cb3-19" title="19">下付き、上つきも以下のようにすればＯＫです。</a>
+<a class="sourceLine" id="cb3-20" title="20">H~2~O とか 4^2^</a></code></pre></div>
+<p>以上のようにして書いたものが、 次のように出力されます。<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<hr />
+<p>この論文の目的は、 ルース・ミリカンの自然主義的哲学を 人類学に応用する仕方を議論する。</p>
+<p>わたしが「人類学」ということばで意味するのは、 たとえば E.E. Evans-Pritchard の <em>The Nuer</em> であり、 E. R. Leach の <em>Political Systems of Highland Burma</em> なのだ。</p>
+<p>一つの段落の中の改行は無視されます。 そして、文字の装飾も簡単です。 <strong><em>ボールド</em></strong> もできますし、 <em>イタリック</em> も簡単です。 <del>打ちけし線</del> もできます 下付き、上つきも以下のようにすればＯＫです。 H<sub>2</sub>O とか 4<sup>2</sup></p>
+<hr />
+<h2 id="列挙表"><span class="header-section-number">2.3</span> 7.2 列挙、表</h2>
+<p>表は、つぎのように書きます。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb4-1" title="1"></a>
+<a class="sourceLine" id="cb4-2" title="2">| 左詰め | 右詰め | センタリング |</a>
+<a class="sourceLine" id="cb4-3" title="3">|:-     |-:| :-:|</a>
+<a class="sourceLine" id="cb4-4" title="4">| E.E.Evans-Pritchard| 1935 | The Nuer|</a>
+<a class="sourceLine" id="cb4-5" title="5">|E.R. Leach | 1954| Political Systems of Highland Burma|</a></code></pre></div>
+<p>こうなります。</p>
+<hr />
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">左詰め</th>
+<th style="text-align: right;">右詰め</th>
+<th style="text-align: center;">センタリング</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">E.E.Evans-Pritchard</td>
+<td style="text-align: right;">1935</td>
+<td style="text-align: center;">The Nuer</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">E.R. Leach</td>
+<td style="text-align: right;">1954</td>
+<td style="text-align: center;">Political Systems of Highland Burma</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>列挙は、 論文の中ではめったに使わないかもしれませんが、 メモをとるときなどには便利でしょう。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb5-1" title="1"></a>
+<a class="sourceLine" id="cb5-2" title="2">- <span class="fl">こんな風にして</span></a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="fl">- 列挙します</span></a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="fl">- かんたんですね</span></a></code></pre></div>
+<p>次のように表示されます。</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>- こんな風にして</td>
+</tr>
+<tr class="even">
+<td>- 列挙します</td>
+</tr>
+<tr class="odd">
+<td>- かんたんですね</td>
+</tr>
+</tbody>
+</table>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>MSWord と違い、 さまざまなプログラムが使われます<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Windows でエクステンション（拡張子）抜きで ファイルを呼ぶ（じっさいはエクステンションがあるにもかかわらず） という慣習が定着しているようですが、 悪習です。 やめてください。 ファイルはフルネームで（エクステンションをいれて）呼びましょう。<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>日本語のファイル名は使わないようにしましょう。<a href="#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>MSWord と違い、 さまざまなプログラムが使われます<a href="#fnref4" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>
