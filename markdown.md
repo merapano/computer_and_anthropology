@@ -124,28 +124,51 @@ H~2~O とか 4^2^
 
 わたしが「人類学」ということばで意味するのは、
 たとえば
-E.E. Evans-Pritchard の *The Nuer"
+E.E. Evans-Pritchard の *The Nuer*
 であり、
 E. R. Leach の *Political Systems of Highland Burma*
 なのだ。
 
 一つの段落の中の改行は無視されます。
 そして、文字の装飾も簡単です。
-**ボールド** もできますし、
-_イタリック_ も簡単です。
+***ボールド*** もできますし、
+*イタリック* も簡単です。
 ~~打ちけし線~~ もできます
 下付き、上つきも以下のようにすればＯＫです。
 H~2~O とか 4^2^
 
 -----
 
-
-
 ## 列挙、表
 
-以下に例をしめします。
+表は、つぎのように書きます。
+
+```markdown
+
+| 左詰め | 右詰め | センタリング |
+|:-     |-:| :-:|
+| E.E.Evans-Pritchard| 1935 | The Nuer|
+|E.R. Leach | 1954| Political Systems of Highland Burma|
+
+```
+
+こうなります。
+
+-----
+
+| 左詰め | 右詰め | センタリング |
+|:-     |-:| :-:|
+| E.E.Evans-Pritchard| 1935 | The Nuer|
+|E.R. Leach | 1954| Political Systems of Highland Burma|
+
+------
+
+
+
+列挙は、
 論文の中ではめったに使わないかもしれませんが、
-列挙はつぎのようにします。
+メモをとるときなどには便利でしょう。
+
 
 ```markdown
 
