@@ -2,6 +2,23 @@
 title: "Markdown で文章を書く"
 author: "Satoshi Nakagawa"
 created: [2021-08-08]
+references:
+  - id: fenner2012a
+    title: One-click science marketing
+    author:
+      - family: Fenner
+        given: Martin
+    container-title: Nature Materials
+    volume: 11
+    URL: "https://dx.doi.org/10.1038/nmat3283"
+    DOI: 10.1038/nmat3283
+    issue: 4
+    publisher: Nature Publishing Group
+    page: 261-263
+    type: article-journal
+    issued:
+      year: 2012
+      month: 3
 ---
 
 # はじめに
@@ -163,8 +180,6 @@ H~2~O とか 4^2^
 
 ------
 
-
-
 列挙は、
 論文の中ではめったに使わないかもしれませんが、
 メモをとるときなどには便利でしょう。
@@ -187,9 +202,114 @@ H~2~O とか 4^2^
 - かんたんですね
 ----
 
+## 脚注
+
+論文を書くのに大事な脚注はつぎのように入れることができます。
+
+```
+その問いは
+書くことに対する
+確たる基盤をなくしてしまう問いなのである。
+[^kitan]
+
+[^kiban]: ここでは、
+「ある議論が無限退行を引き起こすならば、
+その議論は間違っている」という判断を採用している。
+
+脚注がおわり、ここからまた本文がはじまります。
+
+```
+
+`[^foot]:` の部分が脚注の内容となりますが、
+脚注のおわりは空行によって示します。
+番号はつける必要はありません。
+
+## 引用文献
 
 
+データベースをつくるのが一苦労ですが、
+それさえつくってしまえば、
+何度も使うことができます。
+わたしは bibtex 形式を採用していますが、
+もっと読み易い形式があるので、
+そちらを採用するのがいいでしょう。
 
+以下は bibtex 形式です。 
+
+
+```
+@InCollection{chodorow-family,
+  author =       {Nancy Chodorow},
+  title =        {Family Structure and Feminine
+                  Personality},
+  booktitle =    {Woman, Culture, and Society},
+  pages =        {48--66},
+  crossref =     {z.rosald_lamphere-woman},
+  publisher =    {Stanford University Press},
+  year =         1974,
+  editor =       {M. Z. Rosaldo and L. Lamphere}
+}
+
+@Article{meggitt-male-female,
+  author =       {Meggitt, M. J.},
+  title =        {Male-female relationships in
+                  the Highlands of {Australian New
+                  Guinea}},
+  journal =      {American Anthropologist},
+  year =         1964,
+  volume =       {66 (Pt 2)},
+  pages =        {204--224}
+}
+
+@book{andaya-arung-palakka,
+	author = {Leonard Yuzon Andaya},
+	title = {The Heritage of Arung Palakka: A History of
+                  South {Sulawesi} ({Celebes}) in the Seventeenth
+                  Century},
+	publisher = {Nijhoff},
+	year = 1981,
+	volume = 91,
+	series = {Verhandelingen van het Koninklijk Instituut voor
+                  Taal-, Land- en Volkenkunde},
+	address = {The Hague},
+}
+
+
+```
+
+```
+---
+references:
+  - id: fenner2012a
+    title: One-click science marketing
+    author:
+      - family: Fenner
+        given: Martin
+    container-title: Nature Materials
+    volume: 11
+    URL: "https://dx.doi.org/10.1038/nmat3283"
+    DOI: 10.1038/nmat3283
+    issue: 4
+    publisher: Nature Publishing Group
+    page: 261-263
+    type: article-journal
+    issued:
+      year: 2012
+      month: 3
+---
+```
+
+chodorow-family のキーがついている文献を引用したいときは、
+`[@chodorow-family]` `[@fenner2012a]` とします。
+ここに [@fenner-2021a]
+
+# External Links
+
+- [参考文献と引用](https://github.com/shd101wyy/markdown-preview-enhanced/blob/master/docs/ja-jp/pandoc-bibliographies-and-citations.md) 
+- [Markdownにbibtexの参考文献を入れる](https://qiita.com/tenomoto/items/d0e04e19ee6437a04b0d)
+
+
+# References
 
 
 
