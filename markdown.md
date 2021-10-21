@@ -112,9 +112,10 @@ author: Satoshi Nakagawa
 
 わたしが「人類学」ということばで意味するのは、
 たとえば
-E.E. Evans-Pritchard の *The Nuer"
+E.E. Evans-Pritchard の *The Nuer*
 であり、
-E. R. Leach の *Political Systems of Highland Burma*
+E. R. Leach の *Political Systems of 
+Highland Burma*
 なのだ。
 
 一つの段落の中の改行は無視されます。
