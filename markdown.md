@@ -1,24 +1,7 @@
 ---
 title: "Markdown で文章を書く"
 author: "Satoshi Nakagawa"
-created: [2021-08-08]
-references:
-  - id: fenner2012a
-    title: One-click science marketing
-    author:
-      - family: Fenner
-        given: Martin
-    container-title: Nature Materials
-    volume: 11
-    URL: "https://dx.doi.org/10.1038/nmat3283"
-    DOI: 10.1038/nmat3283
-    issue: 4
-    publisher: Nature Publishing Group
-    page: 261-263
-    type: article-journal
-    issued:
-      year: 2012
-      month: 3
+date: [2021-08-08]
 ---
 
 # はじめに
