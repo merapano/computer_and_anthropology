@@ -56,7 +56,7 @@ M$Word は捨てなさい！
 - 「エディタ」がなにだかわからない人は 
 - ブラウザで https://vscode.dev/ にアクセスしましょう
 
-![VScode エディタ](pict/vscode.png){width=70%}
+![VScode エディタ](pict/vscode.jpg){width=70%}
 
 ★ エディタでファイルをつくる
 
@@ -244,6 +244,7 @@ H~2~O とか 4^2^
 - Preview と表示されると思います
 - さっそくクリックしてみましょう
 
+![Preview icon](pict/vscode-preview-icon.jpg){width=25%}
 ![Preview in VS Code](pict/vscode-preview.jpg){width=70%}
 
 
