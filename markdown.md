@@ -2,23 +2,6 @@
 title: "Markdown で文章を書く"
 author: "Satoshi Nakagawa"
 created: [2021-08-08]
-references:
-  - id: fenner2012a
-    title: One-click science marketing
-    author:
-      - family: Fenner
-        given: Martin
-    container-title: Nature Materials
-    volume: 11
-    URL: "https://dx.doi.org/10.1038/nmat3283"
-    DOI: 10.1038/nmat3283
-    issue: 4
-    publisher: Nature Publishing Group
-    page: 261-263
-    type: article-journal
-    issued:
-      year: 2012
-      month: 3
 ---
 
 # はじめに
@@ -30,6 +13,15 @@ M$Word は捨てなさい！
 
 そして **Markdown** 記法を使いましょう。
 とっても簡単です。
+
+★ MSWord は捨てよ
+
+- 商用の契約にしばられた
+- ファイル形式ではなく、
+- 世界に開かれたプレインテキストを使いましょう。
+- **Markdown** 記法を使いましょう。
+- とっても簡単です。
+
 
 いまは使う人はすくないかもしれませんが、
 初期のころの email で使われた記法があります。
@@ -56,6 +48,23 @@ M$Word は捨てなさい！
   ファイルはフルネームで（エクステンションをいれて）呼びましょう。
 
 [^fname]: 日本語のファイル名は使わないようにしましょう。
+
+★ エディタでディレクトリ／フォルダを開ける
+
+- 「エディタ」はプレインテキストを編集する道具です
+- 「メモ帳」でいいのですが、きょうは「VS Code」を使いましょう
+- 「エディタ」がなにだかわからない人は 
+- ブラウザで https://vscode.dev/ にアクセスしましょう
+
+![VScode エディタ](pict/vscode.png){width=70%}
+
+★ エディタでファイルをつくる
+
+- 紙に＋（プラスサイン）のアイコンを押します
+- ファイル名の入力がうながされますので、適当な名前
+  (bar.md) を入力します
+- 右の大きな画面で、入力がうながされますので、
+  ここに書いていきましょう
 
 ## タイトルと構成
 
@@ -115,7 +124,7 @@ author: Satoshi Nakagawa
 E.E. Evans-Pritchard の *The Nuer*
 であり、
 E. R. Leach の *Political Systems of 
-Highland Burma*
+Highland Burma* [@leach-kachin]
 なのだ。
 
 一つの段落の中の改行は無視されます。
@@ -144,7 +153,7 @@ H~2~O とか 4^2^
 たとえば
 E.E. Evans-Pritchard の *The Nuer*
 であり、
-E. R. Leach の *Political Systems of Highland Burma*
+E. R. Leach の *Political Systems of Highland Burma* [@leach-kachin]
 なのだ。
 
 一つの段落の中の改行は無視されます。
@@ -225,8 +234,20 @@ H~2~O とか 4^2^
 脚注のおわりは空行によって示します。
 番号はつける必要はありません。
 
-## 引用文献
+## プレビュー
 
+★ プレビュー
+
+- プレビュー機能があれば利用しましょう
+- VS Code では右側の上にあります
+- いくつかのアイコンにマウスをかさねてみてください
+- Preview と表示されると思います
+- さっそくクリックしてみましょう
+
+![Preview in VS Code](pict/vscode-preview.jpg){width=70%}
+
+
+## 引用文献
 
 データベースをつくるのが一苦労ですが、
 それさえつくってしまえば、
@@ -239,27 +260,17 @@ H~2~O とか 4^2^
 
 
 ```
-@InCollection{chodorow-family,
-  author =       {Nancy Chodorow},
-  title =        {Family Structure and Feminine
-                  Personality},
-  booktitle =    {Woman, Culture, and Society},
-  pages =        {48--66},
-  crossref =     {z.rosald_lamphere-woman},
-  publisher =    {Stanford University Press},
-  year =         1974,
-  editor =       {M. Z. Rosaldo and L. Lamphere}
-}
-
-@Article{meggitt-male-female,
-  author =       {Meggitt, M. J.},
-  title =        {Male-female relationships in
-                  the Highlands of {Australian New
-                  Guinea}},
-  journal =      {American Anthropologist},
-  year =         1964,
-  volume =       {66 (Pt 2)},
-  pages =        {204--224}
+@book{leach-kachin,
+	author = {Leach, E. R.},
+	title = {Political Systems of Highland
+                  Burma: A Study of Kachin Social
+                  Structure},
+	publisher = {The Athlone Press},
+	series = {London School of Economics
+                  Monographs on Social
+                  Anthropology},
+	address = {London},
+	year = 1954
 }
 
 @book{andaya-arung-palakka,
@@ -277,6 +288,8 @@ H~2~O とか 4^2^
 
 
 ```
+
+あるいは、以下のような形式もＯＫです。
 
 ```
 ---
@@ -300,15 +313,14 @@ references:
 ---
 ```
 
-chodorow-family のキーがついている文献を引用したいときは、
-`[@chodorow-family]` `[@fenner2012a]` とします。
-ここに [@fenner-2021a]
+`leach-kachin` のキーがついている文献を引用したいときは、
+`[@leach-kachin]` とします。
+ここに [@leach-kachin] をいれる。
 
 # External Links
 
 - [参考文献と引用](https://github.com/shd101wyy/markdown-preview-enhanced/blob/master/docs/ja-jp/pandoc-bibliographies-and-citations.md) 
 - [Markdownにbibtexの参考文献を入れる](https://qiita.com/tenomoto/items/d0e04e19ee6437a04b0d)
-
 
 # References
 
