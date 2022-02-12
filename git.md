@@ -141,11 +141,13 @@ title: bar の README
 author: foo
 ---
 
-はじめての github です。
-
 ```
 
-ここで
+ここで使われいるのは [markdown](markdown.md) と
+呼ばれる記法ですが、
+それについては後で述べることにします。
+
+さて、ここで以下のコマンドを打ちます。
 
 ```
 git status
@@ -168,5 +170,10 @@ modified:  REAMD.md
 二行目で、
 この README.md をステージングエリアに
 add/stage します。
+
+「まだ stage されていない」ファイルはなくなりましたが、
+その代わり「まだ commit されていない」ファイルとして
+README.md が挙げられている筈です。
+
 
 
