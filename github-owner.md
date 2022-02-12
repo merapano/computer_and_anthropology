@@ -15,9 +15,9 @@ author: Satoshi Nakagawa
 メンバーのやるべきことは
 [「メンバー編」](github-member.md) を見よ。
 
-あなた（オーナー）のアカウントの名前を foo とします。
-メンバーの名前を bar とします。
-対象となるリポジトリを baz とします。
+あなた（オーナー）のアカウントの名前を foo とする。
+メンバーの名前を bar とする。
+対象となるリポジトリを baz とする。
 
 # collaborator
 
@@ -32,6 +32,10 @@ github にアカウントをもっていなければ
 リポジトリの
 `Settings -> Manage Access` (要パスワード) で、
 相手のアカウント名 (bar) を `Add people` の欄に加える。
+
+# branch
+
+github 上で branch をつくる。
 
 以上で終了
 
