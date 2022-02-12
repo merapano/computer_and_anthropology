@@ -1,18 +1,18 @@
 ---
-title: ダウンロードします
+title: (Windows) ダウンロードします
 autor: Satoshi Nakagawa
 ---
 
-# ウィンドウズで github する
-
 # ダウンロードします
+
+まずは道具をそろえましょう。
 
 ## Terminal
 
 まもなく Windows の標準ターミナルとなる（らしい）
-Windows terminal を使用しましょう。
+"Windows terminal" を使用するのが安全でしょう。
 [ここ](https://docs.microsoft.com/ja-jp/windows/terminal/install)を見て、
-Windows Terminal をインストールします。
+"Windows Terminal" をインストールします。
 
 ## Editor
 
@@ -27,17 +27,20 @@ Visual Studio をダウンロードしてください。
 ## OpenSSh 
 
 つづいて ssh をインストールします
-[OpenSSH をインストールする](https://docs.microsoft.com/ja-jp/windows-server/administration/openssh/openssh_install_firstuse)
+[ここ](https://docs.microsoft.com/ja-jp/windows-server/administration/openssh/openssh_install_firstuse)
+を参考にして、
+インストールしてください。
 
 ## git 
 
-ここで、真打登場、 git をダウンロードする。
+いよいよ、真打登場、 git をダウンロードします。
 [ここ](https://gitforwindows.org/) からダウンロードしてください。
 
 # さぁ
 
 これで準備ができました。
-github での共同作業にむけて次のステップに進みましょう。
+github での共同作業にむけて
+[次のステップ](github.md)に進みましょう。
 
 # External Links
 

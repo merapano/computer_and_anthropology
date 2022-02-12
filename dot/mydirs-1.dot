@@ -1,0 +1,8 @@
+digraph {
+        rankdir=LR
+        node[shape=box]
+        A[label="home dir\n~/"]
+        G[label="github/\n~/github/"]
+        A -> G
+}
+
