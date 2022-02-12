@@ -7,14 +7,16 @@ author: "Satoshi Nakagawa"
 
 # メインの流れ
 
-- [はじめに](intro.md)
-- [準備する](intro.md) --- マシンを準備して、
-  [Linux をインストールします](linux.md) 
-- [マークダウン](markdown.md) --- マークダウン記法で論文を書きます
-- [git を使います](git.md) --- バージョン管理用に git をつかいます
-- [一人でリポジトリをつくります](github.com)
-- [リポジトリで共同作業をする（オーナー編）](github-owner.md)
+- [はじめに](intro.md) 
+<!-- - [準備する](chromebook.md) --- マシンを準備して、-->
+<!--   [Linux をインストールする](linux.md)  -->
+- [(Windows)いろいろダウンロードするす](download.md) 
+- [一人でリポジトリをつくる](github.md)
+- [git を使う](git.md) --- バージョン管理用に git をつかいます
+- [マークダウンで論文を書く](markdown.md)
+- [他の人のリポジトリをフォークする](github-fork.md) 
 - [リポジトリで共同作業をする（メンバー編）](github-member.md)
+- [リポジトリで共同作業をする（オーナー編）](github-owner.md)
 
 # コラム
 
