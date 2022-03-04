@@ -4,7 +4,7 @@ subtitle: ""
 author: "Satoshi Nakagawa"
 date:
  - created: 2022-03-04
- - updated: 2022-03-04 12:07
+ - updated: 2022-03-04 12:24
 spec: 
 memo: 
 filename: mermaid.md
@@ -13,7 +13,7 @@ documentclass: bxjsarticle
 
 # 序
 
-[ここ](https://cdn-ssl-devio-img.classmethod.jp/wp-content/uploads/2021/12/mermaid-markdown-in-notion_08_user-journey-diagram.png?_ga=2.63999727.1741402734.1646361101-277997237.1642648716)
+[公式ページ](https://mermaid-js.github.io/mermaid#/)
 から例をひく。
 
 
@@ -122,7 +122,59 @@ classDiagram
 
 ```
 
+# state diagram
+
+状態遷移図
+
+
+```
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+
+```
+
+```mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+
+```
+
+# ER
+
+Entity Relationship Diagram
+
+```
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+```
+
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+```
+
+
 # journey
+
+ジャーニーマップ
+
+User Journey
 
 ```
 journey
@@ -150,3 +202,147 @@ journey
      Sit down: 5: おれ
     
 ```
+
+# ガントチャート
+
+Gantt
+
+```
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+```
+
+
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+```
+
+# パイチャート
+
+Pie
+
+```
+pie
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  5
+
+```
+
+
+```mermaid
+pie
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  5
+
+```
+
+
+# 要件
+
+requirement diagram
+
+```mermaid
+requirementDiagram
+
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
+    }
+
+    element test_entity {
+    type: simulation
+    }
+
+    test_entity - satisfies -> test_req
+```
+
+
+```
+requirementDiagram
+
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
+    }
+
+    element test_entity {
+    type: simulation
+    }
+
+    test_entity - satisfies -> test_req
+```
+
+# Git Graph (experimental)
+
+```
+gitGraph:
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+
+```
+
+
+```mermaid
+gitGraph:
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+
+```
+
+
+
+# External Links
+
+- [GitHubで使えるようになった Mermaid の便利なところ](https://zenn.dev/yasuhiroki/articles/dd0feae790ba41)
+- [](https://mermaid-js.github.io/mermaid/#/)    
