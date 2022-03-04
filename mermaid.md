@@ -4,7 +4,7 @@ subtitle: ""
 author: "Satoshi Nakagawa"
 date:
  - created: 2022-03-04
- - updated: 2022-03-04 11:54
+ - updated: 2022-03-04 12:01
 spec: 
 memo: 
 filename: mermaid.md
@@ -27,8 +27,8 @@ documentclass: bxjsarticle
 flowchart LR
  A[Hard Edge] --> |Link Text| B(Round Edge)
  B --> C{Decision}
- C --> |One| D {Result one}
- C --> |Two| E {Result two}
+ C --> |One| D{Result one}
+ C --> |Two| E{Result two}
 ```
 
 以下のようになる
@@ -45,11 +45,22 @@ flowchart LR
 
 # sequence diagram
 
-
+```mermaid
+sequenceDiagram
+  autoNumber
+  Alice ->> John: Hello John, ごきげんいかが？
+  loop HealthCheck
+    John ->> John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John -->> Alice: Great!
+  John ->> Bob: How about you?
+  Bob -->> John: Jolly good!
+```
 
 # journey
 
-```mermaid
+```
 
 journey
     title My Working Day
@@ -67,13 +78,13 @@ journey
 ```mermaid
 
 journey
-    title ぼくの労働日
+    title おれの労働日
     section Go to work
-     make tea: 5: me
-     go upstairs: 3: me
-     Do work: 1 : me, cat
+     make tea: 5: おれ
+     go upstairs: 3: おれ
+     Do work: 1 : おれ, 猫
    section Go home
-     Go downstairs: 5: me
-     Sit down: 5: me
+     Go downstairs: 5: おれ
+     Sit down: 5: おれ
     
 ```
