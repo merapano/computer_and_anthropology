@@ -181,14 +181,13 @@ README.md が挙げられている筈です。
 
 ```mermaid
 
-gitGraph bt:
-
-branch test
-checkout test
-commit
-commit
-checkout main
-merge test
+gitGraph BT:
+  branch test
+  checkout test
+  commit
+  commit
+  checkout main
+  merge test
 
 ```
 
