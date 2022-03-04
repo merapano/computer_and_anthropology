@@ -124,6 +124,8 @@ GitHub があることは忘れて、ローカルのマシンだけの
 
 じっさいに作業をしてみましょう。
 
+### 編集
+
 README.md を編集しましょう。
 [エディタ](editor.md) には atom をつかっていることとします。
 
@@ -146,6 +148,8 @@ author: foo
 ここで使われいるのは [markdown](markdown.md) と
 呼ばれる記法ですが、
 それについては後で述べることにします。
+
+### ステージエリアに登録する (add)
 
 さて、ここで以下のコマンドを打ちます。
 
@@ -175,5 +179,19 @@ add/stage します。
 その代わり「まだ commit されていない」ファイルとして
 README.md が挙げられている筈です。
 
+```mermaid
 
+gitGraph bt:
+options
+{
+    "nodeSpacing": 20,
+    "nodeRadius": 10
+}
+end
+
+commit
+branch 
+add
+
+```
 
