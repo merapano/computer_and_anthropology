@@ -23,5 +23,5 @@ author: "Satoshi Nakagawa"
 - [エディタ](editor.md) --- エディタとはなにか
 - [Emacs をつかいこなす](emacs.md) --- エディタのなかのエディタ、
   Emacs をつかいこなします
-
+- [Mermaid でグラフを書く](mermaid.md) 
 
