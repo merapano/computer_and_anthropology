@@ -182,16 +182,11 @@ README.md が挙げられている筈です。
 ```mermaid
 
 gitGraph bt:
-options
-{
-    "nodeSpacing": 20,
-    "nodeRadius": 10
-}
-end
 
 commit
 branch 
 add
+checkout
 
 ```
 
