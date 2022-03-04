@@ -4,7 +4,7 @@ subtitle: ""
 author: "Satoshi Nakagawa"
 date:
  - created: 2022-03-04
- - updated: 2022-03-04 11:53
+ - updated: 2022-03-04 11:54
 spec: 
 memo: 
 filename: mermaid.md
@@ -38,8 +38,8 @@ flowchart LR
 flowchart LR
  A[Hard Edge] --> |Link Text| B(Round Edge)
  B --> C{Decision}
- C --> |One| D {Result one}
- C --> |Two| E {Result two}
+ C --> |One| D{Result one}
+ C --> |Two| E{Result two}
 
 ```
 
