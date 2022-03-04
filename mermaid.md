@@ -4,7 +4,7 @@ subtitle: ""
 author: "Satoshi Nakagawa"
 date:
  - created: 2022-03-04
- - updated: 2022-03-04 12:01
+ - updated: 2022-03-04 12:05
 spec: 
 memo: 
 filename: mermaid.md
@@ -56,6 +56,33 @@ sequenceDiagram
   John -->> Alice: Great!
   John ->> Bob: How about you?
   Bob -->> John: Jolly good!
+```
+
+# class diagram
+
+```mermaid
+classDiagram
+      Animal <|-- Duck
+      Animal <|-- Fish
+      Animal <|-- Zebra
+      Animal : +int age
+      Animal : +String gender
+      Animal: +isMammal()
+      Animal: +mate()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+
 ```
 
 # journey
