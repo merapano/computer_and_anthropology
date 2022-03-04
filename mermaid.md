@@ -4,7 +4,7 @@ subtitle: ""
 author: "Satoshi Nakagawa"
 date:
  - created: 2022-03-04
- - updated: 2022-03-04 12:05
+ - updated: 2022-03-04 12:07
 spec: 
 memo: 
 filename: mermaid.md
@@ -45,6 +45,19 @@ flowchart LR
 
 # sequence diagram
 
+```
+sequenceDiagram
+  autoNumber
+  Alice ->> John: Hello John, ごきげんいかが？
+  loop HealthCheck
+    John ->> John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John -->> Alice: Great!
+  John ->> Bob: How about you?
+  Bob -->> John: Jolly good!
+```
+
 ```mermaid
 sequenceDiagram
   autoNumber
@@ -60,6 +73,30 @@ sequenceDiagram
 
 # class diagram
 
+```
+classDiagram
+      Animal <|-- Duck
+      Animal <|-- Fish
+      Animal <|-- Zebra
+      Animal : +int age
+      Animal : +String gender
+      Animal: +isMammal()
+      Animal: +mate()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+
+```
 ```mermaid
 classDiagram
       Animal <|-- Duck
@@ -88,7 +125,6 @@ classDiagram
 # journey
 
 ```
-
 journey
     title My Working Day
     section Go to work
@@ -100,7 +136,6 @@ journey
      Sit down: 5: me
     
 ```
-日本語を使うことも可能だ。
 
 ```mermaid
 
