@@ -183,10 +183,12 @@ README.md が挙げられている筈です。
 
 gitGraph bt:
 
+branch test
+checkout test
 commit
-branch 
-add
-checkout
+commit
+checkout main
+merge test
 
 ```
 
