@@ -182,12 +182,22 @@ README.md が挙げられている筈です。
 ```mermaid
 
 gitGraph BT:
-  branch test
-  checkout test
-  commit
-  commit
-  checkout main
-  merge test
+options
+{
+    "nodeSpacing": 100,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+
 
 ```
 

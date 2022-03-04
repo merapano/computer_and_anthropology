@@ -4,7 +4,7 @@ subtitle: ""
 author: "Satoshi Nakagawa"
 date:
  - created: 2022-03-04
- - updated: 2022-03-04 12:24
+ - updated: 2022-03-04 15:39
 spec: 
 memo: 
 filename: mermaid.md
@@ -337,6 +337,7 @@ checkout master
 commit
 commit
 merge newbranch
+
 
 ```
 
