@@ -4,7 +4,7 @@ subtitle: ""
 author: "Satoshi Nakagawa"
 date:
  - created: 2022-03-04
- - updated: 2022-03-04 15:39
+ - updated: 2022-03-06 16:43
 spec: 
 memo: 
 filename: mermaid.md
@@ -300,10 +300,10 @@ requirementDiagram
 # Git Graph (experimental)
 
 ```
-gitGraph:
+gitGraph DT:
 options
 {
-    "nodeSpacing": 150,
+    "nodeSpacing": 120,
     "nodeRadius": 10
 }
 end
@@ -313,18 +313,17 @@ checkout newbranch
 commit
 commit
 checkout master
-commit
-commit
 merge newbranch
+commit
 
 ```
 
 
 ```mermaid
-gitGraph:
+gitGraph DT:
 options
 {
-    "nodeSpacing": 150,
+    "nodeSpacing": 120,
     "nodeRadius": 10
 }
 end
@@ -334,9 +333,8 @@ checkout newbranch
 commit
 commit
 checkout master
-commit
-commit
 merge newbranch
+commit
 
 
 ```
