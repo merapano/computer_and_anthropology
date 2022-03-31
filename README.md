@@ -10,6 +10,11 @@ author: "Satoshi Nakagawa"
 - [はじめに](intro.md) 
 <!-- - [準備する](chromebook.md) --- マシンを準備して、-->
 <!--   [Linux をインストールする](linux.md)  -->
+
+- 
+- [実演販売（その1）](pandoc.md)
+
+# むかしのファイル
 - [(Windows)いろいろダウンロードするす](download.md) 
 - [一人でリポジトリをつくる](github.md)
 - [git を使う](git.md) --- バージョン管理用に git をつかいます
