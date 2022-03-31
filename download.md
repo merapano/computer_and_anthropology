@@ -11,7 +11,8 @@ autor: Satoshi Nakagawa
 
 まもなく Windows の標準ターミナルとなる（らしい）
 "Windows terminal" を使用するのが安全でしょう。
-[ここ](https://docs.microsoft.com/ja-jp/windows/terminal/install)を見て、
+[ここ](https://docs.microsoft.com/ja-jp/windows/terminal/install)
+を見て、
 "Windows Terminal" をインストールします。
 
 ## Editor
