@@ -5,16 +5,15 @@ author: "Satoshi Nakagawa"
 
 人類学者向けに書いたコンピューター入門です。 
 
-# メインの流れ
+# メインの流れ（ここだけ読んでください）
 
 - [はじめに](intro.md) 
-<!-- - [準備する](chromebook.md) --- マシンを準備して、-->
-<!--   [Linux をインストールする](linux.md)  -->
-
-- 
 - [実演販売（その1）](pandoc.md)
 
+
 # むかしのファイル
+<!-- - [準備する](chromebook.md) --- マシンを準備して、-->
+<!--   [Linux をインストールする](linux.md)  -->
 - [(Windows)いろいろダウンロードするす](download.md) 
 - [一人でリポジトリをつくる](github.md)
 - [git を使う](git.md) --- バージョン管理用に git をつかいます
