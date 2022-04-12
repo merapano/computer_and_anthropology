@@ -8,7 +8,9 @@ author: "Satoshi Nakagawa"
 # メインの流れ（ここだけ読んでください）
 
 - [はじめに](intro.md) 
-- [実演販売（その1）](pandoc.md)
+- [実演販売](pandoc.md)
+- [powershell を起動する](shell.md)
+- [エディタを選ぶ](editor.md)
 
 
 # むかしのファイル
