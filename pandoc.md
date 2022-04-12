@@ -39,17 +39,19 @@ https://github.com/merapano/naturalism.git
 ター（「ローカル」）の中にとりこむことをクロー
 ン (clone) するといいます。
 
-powershell を起動してください。
+powershell [^ps] を起動してください。
 
-# powershell の起動の仕方がわからない方は、次
-# のメールをおよみください
+[^ps]:  powershell の起動の仕方がわからない方は、
+ [「Powershell の起動の仕方」](shell.md) をおよみください
 
 ターミナルがたちあがります。以下のように打ち
 こんでください。2行あります。行の終わりでリター
 ンを押してください。
 
+```
 cd ~
 git clone https://github.com/merapano/naturalism.git
+```
 
 username と password を聞かれますので、入力し
 てください。
@@ -61,7 +63,9 @@ naturalism というディレクトリ（フォルダ）がで
 naturalism ディレクトリ（フォルダ）に入りましょ
 う。次のようにターミナルに打ちこんでください。
 
+```
 cd naturalism
+```
 
 ls あるいは dir すれば、そのディレクトリ内に
 どのようなファイルがあるか分かりますので、確
@@ -78,7 +82,9 @@ ls
 ずです。これらのファイルの中身はつぎのように
 して観ることが可能です。
 
+```
 more iida-abstract.md
+```
 
 どこかだ見たような記法で書かれています。これ
 をマークダウン記法といいます。pandoc を使えば、
@@ -90,25 +96,30 @@ more iida-abstract.md
 う。ターミナルに以下のように打ちこんでくださ
 い。
 
+```
 pandoc -o output.docx iida-abstract.md
+```
 
 MSWord で読んでみてください。
 
-"-o output.docx" の部分を "-o output.html" に
+`-o output.docx` の部分を `-o output.html` に
 すれば、HTML のファイル (output.html) が、
-"-o output.epub" にすれば Epub のファイルがで
+`-o output.epub` にすれば Epub のファイルがで
 きあがります。たとえば：
 
+```
 pandoc -o output.html iida-abstract.md
+```
 
 文献も処理できます。浜本さんの論文には文献が
 引用されています。ターミナルに次のように打ち
 こんでください。
 
+```
 pandoc -o output.docx --citeproc --bibliography=hamamoto.bib hamamoto-abstract.md
+```
 
-これで文献表つきの output.docx ができあがりま
-す。
+これで文献表つきの output.docx ができあがります。
 
 
 
