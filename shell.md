@@ -47,3 +47,6 @@ Windows PowerShell（Windows PowerShell ISEで
 はなく）を選ぶ
 
 
+# External Links
+
+- [PowerShell 使い方メモ](https://qiita.com/opengl-8080/items/bb0f5e4f1c7ce045cc57)
