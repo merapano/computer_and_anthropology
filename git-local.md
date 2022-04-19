@@ -1,5 +1,5 @@
 ---
-title: 一人でローカルで git で遊ぶ
+title: 一人で git で遊ぶ
 author: Satoshi Nakagawa
 date: [2022-04-20]
 ---
