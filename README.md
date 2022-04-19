@@ -11,6 +11,8 @@ author: "Satoshi Nakagawa"
 - [実演販売](pandoc.md)
 - [powershell を起動する](shell.md)
 - [エディタを選ぶ](editor.md)
+- [マークダウンで文章を書く](markdown.md)
+- [一人で git で遊ぶ](git-local.md)
 
 
 # むかしのファイル
@@ -19,7 +21,7 @@ author: "Satoshi Nakagawa"
 - [(Windows)いろいろダウンロードするす](download.md) 
 - [一人でリポジトリをつくる](github.md)
 - [git を使う](git.md) --- バージョン管理用に git をつかいます
-- [マークダウンで論文を書く](markdown.md)
+- [マークダウンで論文を書く](markdown-alt.md)
 - [他の人のリポジトリをフォークする](github-fork.md) 
 - [リポジトリで共同作業をする（メンバー編）](github-member.md)
 - [リポジトリで共同作業をする（オーナー編）](github-owner.md)
