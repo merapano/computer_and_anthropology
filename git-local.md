@@ -1,6 +1,7 @@
 ---
 title: 一人でローカルで git で遊ぶ
 author: Satoshi Nakagawa
+date: [2022-04-20]
 ---
 
 # はじめに
