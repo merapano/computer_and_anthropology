@@ -116,7 +116,7 @@ checkout test
 commit
 commit
 commit
-branch main
+checkout main
 merge test
 
 ```
