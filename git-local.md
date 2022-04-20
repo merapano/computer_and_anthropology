@@ -106,6 +106,19 @@ git にもっとなれてからのほうがいいでしょう。
            T1    T2     T3
 ```
 
+```mermaid
+gitGraph BT;
+commit
+branch test
+checkout test
+commit
+commit
+commit
+branch main
+merge test
+
+```
+
 A1 まで作業をしているとしましょう。
 そこで「こうしようか、ああしようか」迷ったとします。
 そのような場合は、
