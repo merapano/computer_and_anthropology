@@ -33,3 +33,19 @@ author: "Satoshi Nakagawa"
   Emacs をつかいこなします
 - [Mermaid でグラフを書く](mermaid.md) 
 
+# おまけ
+
+![図：ブランチを切る](https://g.gravizo.com/svg?
+digraph G {
+ rankdir = LR;
+ node[shape=circle, style=filled, color=lightblue];
+ M1, M2 [fontcolor=white, color=blue];
+ rank = same; M1; M2;
+ M1 -> M2 [label="merge test"] ;;
+ rank = same; T1; T2; T3;
+ T1 [weight=3];
+ M1 -> T1 [label="co -b test"] ;
+ T1 -> T2 -> T3 ;
+ T3 -> M2 ;
+} 
+)
