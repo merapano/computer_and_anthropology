@@ -115,10 +115,10 @@ digraph G {
  node[shape=circle, style=filled, color=lightblue];
  M1, M2 [fontcolor=white, color=blue];
  rank = same; M1; M2;
- M1 -> M2 [label="merge test"] ;;
+ M1 -> M2 [label="merge\ntest"] ;
  rank = same; T1; T2; T3;
  T1 [weight=3];
- M1 -> T1 [label="co -b test"] ;
+ M1 -> T1 [label="co -b\ntest"] ;
  T1 -> T2 -> T3 ;
  T3 -> M2 ;
 } 
