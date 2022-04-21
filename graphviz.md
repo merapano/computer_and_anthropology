@@ -4,7 +4,7 @@ author: Satoshi Nakagawa
 ---
 
 
-![](http://g.gravizo.com/g?
+![Alt Text](https://g.gravizo.com/svg?
 
 digraph {
 
