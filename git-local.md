@@ -108,6 +108,24 @@ git にもっとなれてからのほうがいいでしょう。
            T1    T2     T3
 ```
 
+
+![図：ブランチを切る](https://g.gravizo.com/svg?
+digraph G {
+ rankdir = LR;
+ node[shape=circle, style=filled, color=lightblue];
+ M1, M2 [fontcolor=white, color=blue];
+ rank = same; M1; M2;
+ M1 -> M2 [label="merge test"] ;;
+ rank = same; T1; T2; T3;
+ T1 [weight=3];
+ M1 -> T1 [label="co -b test"] ;
+ T1 -> T2 -> T3 ;
+ T3 -> M2 ;
+} 
+)
+
+<!--
+
 ```mermaid
 gitGraph BT;
 commit
@@ -120,6 +138,10 @@ checkout main
 merge test
 
 ```
+
+-->
+
+
 
 A1 まで作業をしているとしましょう。
 そこで「こうしようか、ああしようか」迷ったとします。
@@ -165,7 +187,7 @@ test ブランチは削除されます。
 ここでは「ブランチ全体を採用するか否か」の場合だけを
 取り上げましたが、
 もっと細かく採用部分を指定できます
-（「さくらんぼ摘み」といいます）---
+（「[さくらんぼ摘み](cherrypicking.md)」といいます）---
 その詳しいやりかたは、後日紹介します。
 
 ## 心得
