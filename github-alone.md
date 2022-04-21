@@ -24,4 +24,11 @@ author: Satoshi Nakagawa
 - 編集した分をローカルリポジトリに登録する (`git add file_name` 
   そして `git commit file_name -m "Begin editing"`)
 
+そうそう `git log` についてお話しするのを
+忘れていました。
+「やりなおし」を紹介しなかったので、
+いったい何のために `add` したり `commit` したりしたのか
+疑問に思うひとも多いでしょう。
+
+
   
