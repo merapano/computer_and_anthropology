@@ -12,7 +12,9 @@ author: "Satoshi Nakagawa"
 - [マークダウンで文章を書く](markdown.md)
 - [一人で git で遊ぶ](git-local.md)
 - [一人で github で遊ぶ](github-alone.md)
+- [ログをみる](git-log.md)
 - [みんなで github で遊ぶ](github-together.md)
+
 
 # むかしのファイル
 <!-- - [準備する](chromebook.md) --- マシンを準備して、-->
