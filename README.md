@@ -11,8 +11,9 @@ author: "Satoshi Nakagawa"
 - [pandoc が動くまで](pandoc.md)
 - [マークダウンで文章を書く](markdown.md)
 - [一人で git で遊ぶ](git-local.md)
-- [一人で github で遊ぶ](github-alone.md)
 - [ログをみる](git-log.md)
+- [一人で github で遊ぶ](github-alone.md)
+- [とりあえず始めてみる](toriaezu.md)
 - [みんなで github で遊ぶ](github-together.md)
 
 
