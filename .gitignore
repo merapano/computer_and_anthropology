@@ -1,0 +1,11 @@
+*.html
+*.epub
+*.docx
+*~
+*.bak
+*.pdf
+*.tex
+*.rtf
+*.old
+docs/*
+pdf.d/*

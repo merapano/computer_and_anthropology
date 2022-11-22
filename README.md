@@ -8,7 +8,13 @@ author: "Satoshi Nakagawa"
 # メインの流れ（ここだけ読んでください）
 
 - [はじめに](intro.md) 
-- [実演販売（その1）](pandoc.md)
+- [pandoc が動くまで](pandoc.md)
+- [マークダウンで文章を書く](markdown.md)
+- [一人で git で遊ぶ](git-local.md)
+- [ログをみる](git-log.md)
+- [一人で github で遊ぶ](github-alone.md)
+- [とりあえず始めてみる](toriaezu.md)
+- [みんなで github で遊ぶ](github-together.md)
 
 
 # むかしのファイル
@@ -17,15 +23,18 @@ author: "Satoshi Nakagawa"
 - [(Windows)いろいろダウンロードするす](download.md) 
 - [一人でリポジトリをつくる](github.md)
 - [git を使う](git.md) --- バージョン管理用に git をつかいます
-- [マークダウンで論文を書く](markdown.md)
+- [マークダウンで論文を書く](markdown-alt.md)
 - [他の人のリポジトリをフォークする](github-fork.md) 
 - [リポジトリで共同作業をする（メンバー編）](github-member.md)
 - [リポジトリで共同作業をする（オーナー編）](github-owner.md)
 
 # コラム
 
-- [エディタ](editor.md) --- エディタとはなにか
+- [powershell を起動する](shell.md)
+- [エディタを選ぶ](editor.md)
+- [さくらんぼ摘み](cherrypicking.md)
+- [Graphviz でグラフを書く](graphviz.md)
+- [Mermaid でグラフを書く](mermaid.md) 
 - [Emacs をつかいこなす](emacs.md) --- エディタのなかのエディタ、
   Emacs をつかいこなします
-- [Mermaid でグラフを書く](mermaid.md) 
 
