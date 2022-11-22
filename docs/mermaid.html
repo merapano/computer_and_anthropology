@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Satoshi Nakagawa" />
+  <title>Mermaid をつかってグラフを書く</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+
+
+h1 {
+border-left: 8px ridge #000000;
+border-bottom: 4px ridge #000000;
+}
+h2 {
+border-left: 6px solid #000000;
+}
+h3 {
+border-left: 6px double #000000;
+}
+
+
+p, li, code, table {
+font-family: monospace;
+word-break: break-all;
+}
+
+p {
+text-align: justify;
+}
+
+p {
+text-indent: 1em;
+}
+
+strong {
+text-decoration: underline;
+}
+
+.box3 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #2c2c2f;
+background: #cde4ff;  }
+.box3 p {
+margin: 0; padding: 0;
+}
+.box8 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+.box8 p {
+margin: 0; padding: 0;
+}
+.box27 {
+position: relative;
+margin: 2em 0;
+padding: 0.5em 1em;
+border: solid 3px #62c1ce;
+}
+.box27 .box-title {
+position: absolute;
+display: inline-block;
+top: -27px;
+left: -3px;
+padding: 0 9px;
+height: 25px;
+line-height: 25px;
+font-size: 17px;
+background: #62c1ce;
+color: #ffffff;
+font-weight: bold;
+border-radius: 5px 5px 0 0;
+}
+.box27 p {
+margin: 0; padding: 0;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Mermaid をつかってグラフを書く</h1>
+<p class="author">Satoshi Nakagawa</p>
+<p class="date">true</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#序"><span class="toc-section-number">1</span> 序</a></li>
+<li><a href="#mermaid-とは"><span class="toc-section-number">2</span> mermaid とは</a></li>
+<li><a href="#flowchart"><span class="toc-section-number">3</span> flowchart</a></li>
+<li><a href="#sequence-diagram"><span class="toc-section-number">4</span> sequence diagram</a></li>
+<li><a href="#class-diagram"><span class="toc-section-number">5</span> class diagram</a></li>
+<li><a href="#state-diagram"><span class="toc-section-number">6</span> state diagram</a></li>
+<li><a href="#er"><span class="toc-section-number">7</span> ER</a></li>
+<li><a href="#journey"><span class="toc-section-number">8</span> journey</a></li>
+<li><a href="#ガントチャート"><span class="toc-section-number">9</span> ガントチャート</a></li>
+<li><a href="#パイチャート"><span class="toc-section-number">10</span> パイチャート</a></li>
+<li><a href="#要件"><span class="toc-section-number">11</span> 要件</a></li>
+<li><a href="#git-graph-experimental"><span class="toc-section-number">12</span> Git Graph (experimental)</a></li>
+<li><a href="#external-links"><span class="toc-section-number">13</span> External Links</a></li>
+</ul>
+</nav>
+<h1 id="序"><span class="header-section-number">1</span> 序</h1>
+<p><a href="https://mermaid-js.github.io/mermaid#/">公式ページ</a> から例をひく。</p>
+<h1 id="mermaid-とは"><span class="header-section-number">2</span> mermaid とは</h1>
+<h1 id="flowchart"><span class="header-section-number">3</span> flowchart</h1>
+<p>以下がソースである</p>
+<pre><code>flowchart LR
+ A[Hard Edge] --&gt; |Link Text| B(Round Edge)
+ B --&gt; C{Decision}
+ C --&gt; |One| D{Result one}
+ C --&gt; |Two| E{Result two}</code></pre>
+<p>以下のようになる</p>
+<pre class="mermaid"><code>
+flowchart LR
+ A[Hard Edge] --&gt; |Link Text| B(Round Edge)
+ B --&gt; C{Decision}
+ C --&gt; |One| D{Result one}
+ C --&gt; |Two| E{Result two}
+</code></pre>
+<h1 id="sequence-diagram"><span class="header-section-number">4</span> sequence diagram</h1>
+<pre><code>sequenceDiagram
+  autoNumber
+  Alice -&gt;&gt; John: Hello John, ごきげんいかが？
+  loop HealthCheck
+    John -&gt;&gt; John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John --&gt;&gt; Alice: Great!
+  John -&gt;&gt; Bob: How about you?
+  Bob --&gt;&gt; John: Jolly good!</code></pre>
+<pre class="mermaid"><code>sequenceDiagram
+  autoNumber
+  Alice -&gt;&gt; John: Hello John, ごきげんいかが？
+  loop HealthCheck
+    John -&gt;&gt; John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts!
+  John --&gt;&gt; Alice: Great!
+  John -&gt;&gt; Bob: How about you?
+  Bob --&gt;&gt; John: Jolly good!</code></pre>
+<h1 id="class-diagram"><span class="header-section-number">5</span> class diagram</h1>
+<pre><code>classDiagram
+      Animal &lt;|-- Duck
+      Animal &lt;|-- Fish
+      Animal &lt;|-- Zebra
+      Animal : +int age
+      Animal : +String gender
+      Animal: +isMammal()
+      Animal: +mate()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+</code></pre>
+<pre class="mermaid"><code>classDiagram
+      Animal &lt;|-- Duck
+      Animal &lt;|-- Fish
+      Animal &lt;|-- Zebra
+      Animal : +int age
+      Animal : +String gender
+      Animal: +isMammal()
+      Animal: +mate()
+      class Duck{
+          +String beakColor
+          +swim()
+          +quack()
+      }
+      class Fish{
+          -int sizeInFeet
+          -canEat()
+      }
+      class Zebra{
+          +bool is_wild
+          +run()
+      }
+</code></pre>
+<h1 id="state-diagram"><span class="header-section-number">6</span> state diagram</h1>
+<p>状態遷移図</p>
+<pre><code>stateDiagram-v2
+    [*] --&gt; Still
+    Still --&gt; [*]
+
+    Still --&gt; Moving
+    Moving --&gt; Still
+    Moving --&gt; Crash
+    Crash --&gt; [*]
+</code></pre>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Still
+    Still --&gt; [*]
+
+    Still --&gt; Moving
+    Moving --&gt; Still
+    Moving --&gt; Crash
+    Crash --&gt; [*]
+</code></pre>
+<h1 id="er"><span class="header-section-number">7</span> ER</h1>
+<p>Entity Relationship Diagram</p>
+<pre><code>erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses</code></pre>
+<pre class="mermaid"><code>erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses</code></pre>
+<h1 id="journey"><span class="header-section-number">8</span> journey</h1>
+<p>ジャーニーマップ</p>
+<p>User Journey</p>
+<pre><code>journey
+    title My Working Day
+    section Go to work
+     make tea: 5: me
+     go upstairs: 3: me
+     Do work: 1 : me, cat
+   section Go home
+     Go downstairs: 5: me
+     Sit down: 5: me
+    </code></pre>
+<pre class="mermaid"><code>
+journey
+    title おれの労働日
+    section Go to work
+     make tea: 5: おれ
+     go upstairs: 3: おれ
+     Do work: 1 : おれ, 猫
+   section Go home
+     Go downstairs: 5: おれ
+     Sit down: 5: おれ
+    </code></pre>
+<h1 id="ガントチャート"><span class="header-section-number">9</span> ガントチャート</h1>
+<p>Gantt</p>
+<pre><code>gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d</code></pre>
+<pre class="mermaid"><code>gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d</code></pre>
+<h1 id="パイチャート"><span class="header-section-number">10</span> パイチャート</h1>
+<p>Pie</p>
+<pre><code>pie
+    title Key elements in Product X
+    &quot;Calcium&quot; : 42.96
+    &quot;Potassium&quot; : 50.05
+    &quot;Magnesium&quot; : 10.01
+    &quot;Iron&quot; :  5
+</code></pre>
+<pre class="mermaid"><code>pie
+    title Key elements in Product X
+    &quot;Calcium&quot; : 42.96
+    &quot;Potassium&quot; : 50.05
+    &quot;Magnesium&quot; : 10.01
+    &quot;Iron&quot; :  5
+</code></pre>
+<h1 id="要件"><span class="header-section-number">11</span> 要件</h1>
+<p>requirement diagram</p>
+<pre class="mermaid"><code>requirementDiagram
+
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
+    }
+
+    element test_entity {
+    type: simulation
+    }
+
+    test_entity - satisfies -&gt; test_req</code></pre>
+<pre><code>requirementDiagram
+
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
+    }
+
+    element test_entity {
+    type: simulation
+    }
+
+    test_entity - satisfies -&gt; test_req</code></pre>
+<h1 id="git-graph-experimental"><span class="header-section-number">12</span> Git Graph (experimental)</h1>
+<pre><code>gitGraph BT:
+options
+{
+    &quot;nodeSpacing&quot;: 120,
+    &quot;nodeRadius&quot;: 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+merge newbranch
+commit
+</code></pre>
+<pre class="mermaid"><code>gitGraph BT:
+options
+{
+    &quot;nodeSpacing&quot;: 120,
+    &quot;nodeRadius&quot;: 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+merge newbranch
+commit
+
+</code></pre>
+<h1 id="external-links"><span class="header-section-number">13</span> External Links</h1>
+<ul>
+<li><a href="https://zenn.dev/yasuhiroki/articles/dd0feae790ba41">GitHubで使えるようになった Mermaid の便利なところ</a></li>
+<li><a href="https://mermaid-js.github.io/mermaid/#/"></a></li>
+</ul>
+</body>
+</html>

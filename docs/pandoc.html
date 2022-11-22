@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Satoshi Nakagawa" />
+  <title>実演販売（その1）</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+
+
+h1 {
+border-left: 8px ridge #000000;
+border-bottom: 4px ridge #000000;
+}
+h2 {
+border-left: 6px solid #000000;
+}
+h3 {
+border-left: 6px double #000000;
+}
+
+
+p, li, code, table {
+font-family: monospace;
+word-break: break-all;
+}
+
+p {
+text-align: justify;
+}
+
+p {
+text-indent: 1em;
+}
+
+strong {
+text-decoration: underline;
+}
+
+.box3 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #2c2c2f;
+background: #cde4ff;  }
+.box3 p {
+margin: 0; padding: 0;
+}
+.box8 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+.box8 p {
+margin: 0; padding: 0;
+}
+.box27 {
+position: relative;
+margin: 2em 0;
+padding: 0.5em 1em;
+border: solid 3px #62c1ce;
+}
+.box27 .box-title {
+position: absolute;
+display: inline-block;
+top: -27px;
+left: -3px;
+padding: 0 9px;
+height: 25px;
+line-height: 25px;
+font-size: 17px;
+background: #62c1ce;
+color: #ffffff;
+font-weight: bold;
+border-radius: 5px 5px 0 0;
+}
+.box27 p {
+margin: 0; padding: 0;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">実演販売（その1）</h1>
+<p class="subtitle">Pandoc を動かしてみよう</p>
+<p class="author">Satoshi Nakagawa</p>
+<p class="date">true</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#はじめに"><span class="toc-section-number">1</span> はじめに</a></li>
+<li><a href="#powershell-の起動の仕方がわからない方は次"><span class="toc-section-number">2</span> powershell の起動の仕方がわからない方は、次</a></li>
+<li><a href="#のメールをおよみください"><span class="toc-section-number">3</span> のメールをおよみください</a></li>
+</ul>
+</nav>
+<h1 id="はじめに"><span class="header-section-number">1</span> はじめに</h1>
+<ol type="1">
+<li>git をダウンロードして、インストールして ください。下の URL を参考にしてください。</li>
+</ol>
+<p>https://www.curict.com/item/60/60bfe0e.html</p>
+<ol start="2" type="1">
+<li>pandoc をダウンロードして、インストールし てください。以下直接リンクです：</li>
+</ol>
+<p>Windows: https://github.com/jgm/pandoc/releases/download/2.17.1.1/pandoc-2.17.1.1-windows-x86_64.msi Mac: https://github.com/jgm/pandoc/releases/download/2.17.1.1/pandoc-2.17.1.1-macOS.pkg</p>
+<p>それらのファイルは、ダブルクリックすれば自動 でインストールされるようにできている筈です。</p>
+<ol start="3" type="1">
+<li>git をつかって、自然化のリポジトリをロー カルにクローンします</li>
+</ol>
+<p>「自然化のリポジトリ」とはおなじみのこれです： https://github.com/merapano/naturalism.git クリックして、確認してください。</p>
+<p>このリポジトリの中身を全部じぶんのコンピュー ター（「ローカル」）の中にとりこむことをクロー ン (clone) するといいます。</p>
+<p>powershell を起動してください。</p>
+<h1 id="powershell-の起動の仕方がわからない方は次"><span class="header-section-number">2</span> powershell の起動の仕方がわからない方は、次</h1>
+<h1 id="のメールをおよみください"><span class="header-section-number">3</span> のメールをおよみください</h1>
+<p>ターミナルがたちあがります。以下のように打ち こんでください。2行あります。行の終わりでリター ンを押してください。</p>
+<p>cd ~ git clone https://github.com/merapano/naturalism.git</p>
+<p>username と password を聞かれますので、入力し てください。</p>
+<p>するとその場所（ホームディレクトリ）に naturalism というディレクトリ（フォルダ）がで きます。</p>
+<p>naturalism ディレクトリ（フォルダ）に入りましょ う。次のようにターミナルに打ちこんでください。</p>
+<p>cd naturalism</p>
+<p>ls あるいは dir すれば、そのディレクトリ内に どのようなファイルがあるか分かりますので、確 認してください。以下のようにターミナルに打ち こめば、ファイル名が示されるはずです。</p>
+<p>ls</p>
+<ol start="4" type="1">
+<li>マークダウンを HTML や docx や epub にする</li>
+</ol>
+<p>そのディレクトリには iida-abstract.md （飯田 さんのアブストラクト）、hamamoto-abstract.md （浜本さんのアブストラクト）などなどがあるは ずです。これらのファイルの中身はつぎのように して観ることが可能です。</p>
+<p>more iida-abstract.md</p>
+<p>どこかだ見たような記法で書かれています。これ をマークダウン記法といいます。pandoc を使えば、 この記法でかかれたファイルを、いろんなファイ ル形式に変換できます。</p>
+<p>飯田さんのファイルを docx ファイル（泣く子も だまる MSWord） (output.docx) にしてみましょ う。ターミナルに以下のように打ちこんでくださ い。</p>
+<p>pandoc -o output.docx iida-abstract.md</p>
+<p>MSWord で読んでみてください。</p>
+<p>“-o output.docx” の部分を “-o output.html” に すれば、HTML のファイル (output.html) が、 “-o output.epub” にすれば Epub のファイルがで きあがります。たとえば：</p>
+<p>pandoc -o output.html iida-abstract.md</p>
+<p>文献も処理できます。浜本さんの論文には文献が 引用されています。ターミナルに次のように打ち こんでください。</p>
+<p>pandoc -o output.docx –citeproc –bibliography=hamamoto.bib hamamoto-abstract.md</p>
+<p>これで文献表つきの output.docx ができあがりま す。</p>
+</body>
+</html>
