@@ -123,3 +123,9 @@ pandoc -o output.docx --citeproc --bibliography=hamamoto.bib hamamoto-abstract.m
 
 
 
+# Exernal Links
+
+- [pandocでmarkdownファイルをwordやpdfへ変換する](https://shikasen-engineer.com/convert_md_to_docxnpdf_by_pandoc/) 
+   + Windows 上での Pandoc の使いかた
+   + Windows 上での latex のインストールの仕方
+
