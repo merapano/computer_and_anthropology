@@ -1,0 +1,29 @@
+# pubdir:/home/satoshi/Output/github/computer_and_anthropology
+
+README:README:::P
+chromebook:クロームブック (Chromebook) をつかってみる:::
+download:ダウンロード
+draft:「覗き見の美徳」ドラフト::markdown のひな形:
+editor:エディタ::Windows や iOS でのエディタ
+git:git の使い方::
+git-local:ローカルでの git の使い方
+git-log: git のログ:
+github:github って何？
+github-alone:ひとりで github:
+github-fork:github をフォークする::だれかの github をつかう仕方
+github-owner:github のオーナーとなる::
+github-member:だれかの github のメンバーとなる
+graphviz:Graphviz のつかいかた:マウスをつかわずグラフを描く (1)
+mermaid:Mermaid のつかいかた:マウスをつかわずグラフを描く (2)
+index:README
+intro:序
+keyboard:キーワード賛歌
+markdown:Markdown
+markdown-alt:
+markdown-code:
+my_cv:わたしの履歴書::
+pandoc:pandoc の使い方
+shell:shell 万歳
+toriaezu:
+writing_papers:わたしの論文の書き方::markdown およびその他のプログラムをつかう
+
