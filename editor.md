@@ -60,6 +60,12 @@ WindowsユーザーでもMacユーザーでも使えるエ
 https://techacademy.jp/magazine/2696を参考に
 してください。
 
+| OS   | editor        | 説明 |
+| :-   | -:            | -:   |
+| Mac  | CotEditor     |      |
+| Both | Visual Studio |      |
+
+
 ## おわりに
 
 以上のエディタのどれかをダウンロードして、
