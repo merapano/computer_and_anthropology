@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Satoshi Nakagawa" />
+  <title>ひとりで github で遊ぶ</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+
+
+h1 {
+border-left: 8px ridge #000000;
+border-bottom: 4px ridge #000000;
+}
+h2 {
+border-left: 6px solid #000000;
+}
+h3 {
+border-left: 6px double #000000;
+}
+
+
+p, li, code, table {
+font-family: monospace;
+word-break: break-all;
+}
+
+p {
+text-align: justify;
+}
+
+p {
+text-indent: 1em;
+}
+
+strong {
+text-decoration: underline;
+}
+
+.box3 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #2c2c2f;
+background: #cde4ff;  }
+.box3 p {
+margin: 0; padding: 0;
+}
+.box8 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+.box8 p {
+margin: 0; padding: 0;
+}
+.box27 {
+position: relative;
+margin: 2em 0;
+padding: 0.5em 1em;
+border: solid 3px #62c1ce;
+}
+.box27 .box-title {
+position: absolute;
+display: inline-block;
+top: -27px;
+left: -3px;
+padding: 0 9px;
+height: 25px;
+line-height: 25px;
+font-size: 17px;
+background: #62c1ce;
+color: #ffffff;
+font-weight: bold;
+border-radius: 5px 5px 0 0;
+}
+.box27 p {
+margin: 0; padding: 0;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">ひとりで github で遊ぶ</h1>
+<p class="author">Satoshi Nakagawa</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#はじめに"><span class="toc-section-number">1</span> はじめに</a></li>
+<li><a href="#もう一つのローカル"><span class="toc-section-number">2</span> もう一つのローカル</a></li>
+<li><a href="#けつろん"><span class="toc-section-number">3</span> けつろん</a></li>
+</ul>
+</nav>
+<h1 id="はじめに"><span class="header-section-number">1</span> はじめに</h1>
+<h2 id="これまでの話"><span class="header-section-number">1.1</span> これまでの話</h2>
+<p><a href="git-local.html">一人で git で遊ぶ</a> と <a href="git-log.html">git でログをみる</a> までにおいて 次のことを学びました</p>
+<ul>
+<li><code>git clone</code> をつかって github にある（リモート）リポジトリを クローンする（ダウンロードする）。こうして、作業ディレクトリと ローカルリポジトリを手に入れる。</li>
+<li>なにはともあれ <code>git branch</code> する（ブランチの名前を <code>test</code> としよう）<br />
+</li>
+<li><a href="editor.html">エディタ</a> を使ってファイルを編集する</li>
+<li>ファイルは <a href="markdwon.html">マークダウン</a> 記法で書かれた プレインテキストファイルである</li>
+<li>編集した分をローカルリポジトリに登録する (<code>git add file_name</code> そして <code>git commit file_name -m &quot;Begin editing&quot;</code>)</li>
+<li><code>git log</code> で他人の／自分のメッセージを見る</li>
+</ul>
+<h2 id="これからの話"><span class="header-section-number">1.2</span> これからの話</h2>
+<p>「これまでの話」は、一言で言えば、 「あたかも github がないかの如き状況」での「話」でした。 ローカルな作業ディレクトリ （およびローカル・リポジトリ）で git をつかう話をしてたわけです。 これからは、もう一度リモート・リポジトリ、 すなわち github に蘇えってもらいます。</p>
+<h1 id="もう一つのローカル"><span class="header-section-number">2</span> もう一つのローカル</h1>
+<p>さて、これまでのローカルな作業ディレクトリが あなたの職場にあるコンピューター（O とします）のものだとします。 「これからの話」では、 もう一つのコンピューター、 家にあるコンピューター (H とします) での作業が問題となります。</p>
+<h2 id="これまでのローカルｏ"><span class="header-section-number">2.1</span> これまでのローカル（Ｏ）</h2>
+<p>Ｏでの作業がひと段落したら、 (1) まず作業していたブランチを main ブランチ（「幹」ですね）にマージします。 （cherry-picking するのが理想ですが、それは後日。） この時点で、ローカルリポジトリと （GitHub にある）リモートリポジトリとは食い違っています。 ローカルリポジトリのほうが少し先に進んでいるわけです。</p>
+<ol start="2" type="1">
+<li>今日の結果である、 できあがったローカルリポジトリを、 リモート・リポジトリに押しこみます。<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></li>
+</ol>
+<pre><code>git push</code></pre>
+<p>リモートリポジトリの状態が、 Ｏのローカルリポジトリと同じになりました。</p>
+<p>これでＯでの作業は終了です。 片付けをして帰りましょう。</p>
+<h2 id="あたらしいローカルｈ"><span class="header-section-number">2.2</span> あたらしいローカル（Ｈ）</h2>
+<p>さて、家に帰ってゆっくりする前に きょうの職場での作業でいくつか気になる点、 修正すべき点、 書き足す点があるとしましょう。 家でさきほどの作業の続きをします。</p>
+<p>家ですでにこのプロジェクトの作業をしていたならば、 作業用ディレクトリはできていたでしょうので、 そのディレクトリ (<code>naturalism/</code>) に移動します。 そして <code>git pull</code> して、 新しい変更点（職場でおこなった変更点）をとりこみます。</p>
+<p>家でこのプロジェクトをするのが初めてならば、 <code>git clone</code> をして、 家のコンピューター（Ｈ）に作業ディレクトリを 作成します。</p>
+<h2 id="あっちこっち"><span class="header-section-number">2.3</span> あっちこっち</h2>
+<p>家でもできればブランチを切るのがいいでしょう。</p>
+<p>いまのところ、 ブランチはローカルに限定されています。 家の作業ディレクトリから 職場の作業ディレクトリでつくったブランチにアクセスはできません。 ブランチをグローバルにする仕方は後日述べます。</p>
+<p>Ｈでも <code>test</code> というブランチを切ることとします — <code>git branch test</code>。</p>
+<p>このブランチで作業して、 <code>add</code> して <code>commit</code> （そしてメッセージを付加）します。 何度もいいますが、 「<code>add</code> の意味がない」 — 「<code>add</code> して <code>commit</code> するより <code>commit</code> だけでいいじゃん」 と思われるかもしれませんが、 ここは穏便に・オンビンに。 いうとおりにしてください。</p>
+<p>そして、 作業がおわったら、 「幹」 (<code>main</code> ブランチ)にもどって、 <code>test</code> ブランチをマージしてください （もちろん cherry-picking ができるのが理想ですが、 それは後日・・・）。</p>
+<pre><code>git checkout main
+git merge test</code></pre>
+<p>もし複数メンバーで作業をしているなら、 <code>git pull</code> して、他の人が <code>push</code> した変更をとりこみます そして、最後に <code>git push</code> して、 自分の変更部分を、 github にあるリモート・リポジトリに押し込んで、 github を最新状況にします。</p>
+<p>翌日、職場にでかけ、 まず (1) ローカルリポジトリを最新の状況にします — <code>git pull</code>。 そして (2) 作業をはじめます。</p>
+<p>さいごに作業結果を <code>git push</code> してください。</p>
+<p>その翌日・・・</p>
+<h1 id="けつろん"><span class="header-section-number">3</span> けつろん</h1>
+<p>というわけです。</p>
+<p>これでとりあえず GitHub での仕事が可能だと思います。</p>
+<p>まだ書いていないのは (a) <code>add</code> と <code>commit</code> の取り扱い、 とりわけ「心変わり」があったときのやり方、 (b) ブランチからいい所取りする cherry-pick のやり方、 そして、 (c) <code>pull</code> したときに起こる可能性のある、 他の作業ディレクトリでの変更（あるいは他の人の変更）との 食い違いの修正の仕方です。</p>
+<p>これらについては、後日述べます。</p>
+<p>とにかく、こらまでの知識で git/github を使っての 論文執筆は可能になったと思いますので、 はじめてください。</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>もし複数のメンバーが参加するプロジェクトならば、 まず <code>git pull</code> して、他のメンバーの作業をとりこむことになりますが、 それはまた後日に述べます。<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>

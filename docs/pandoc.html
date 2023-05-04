@@ -97,8 +97,7 @@ margin: 0; padding: 0;
 <nav id="TOC">
 <ul>
 <li><a href="#はじめに"><span class="toc-section-number">1</span> はじめに</a></li>
-<li><a href="#powershell-の起動の仕方がわからない方は次"><span class="toc-section-number">2</span> powershell の起動の仕方がわからない方は、次</a></li>
-<li><a href="#のメールをおよみください"><span class="toc-section-number">3</span> のメールをおよみください</a></li>
+<li><a href="#exernal-links"><span class="toc-section-number">2</span> Exernal Links</a></li>
 </ul>
 </nav>
 <h1 id="はじめに"><span class="header-section-number">1</span> はじめに</h1>
@@ -116,30 +115,43 @@ margin: 0; padding: 0;
 </ol>
 <p>「自然化のリポジトリ」とはおなじみのこれです： https://github.com/merapano/naturalism.git クリックして、確認してください。</p>
 <p>このリポジトリの中身を全部じぶんのコンピュー ター（「ローカル」）の中にとりこむことをクロー ン (clone) するといいます。</p>
-<p>powershell を起動してください。</p>
-<h1 id="powershell-の起動の仕方がわからない方は次"><span class="header-section-number">2</span> powershell の起動の仕方がわからない方は、次</h1>
-<h1 id="のメールをおよみください"><span class="header-section-number">3</span> のメールをおよみください</h1>
+<p>powershell<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> を起動してください。</p>
 <p>ターミナルがたちあがります。以下のように打ち こんでください。2行あります。行の終わりでリター ンを押してください。</p>
-<p>cd ~ git clone https://github.com/merapano/naturalism.git</p>
+<pre><code>cd ~
+git clone https://github.com/merapano/naturalism.git</code></pre>
 <p>username と password を聞かれますので、入力し てください。</p>
 <p>するとその場所（ホームディレクトリ）に naturalism というディレクトリ（フォルダ）がで きます。</p>
 <p>naturalism ディレクトリ（フォルダ）に入りましょ う。次のようにターミナルに打ちこんでください。</p>
-<p>cd naturalism</p>
+<pre><code>cd naturalism</code></pre>
 <p>ls あるいは dir すれば、そのディレクトリ内に どのようなファイルがあるか分かりますので、確 認してください。以下のようにターミナルに打ち こめば、ファイル名が示されるはずです。</p>
 <p>ls</p>
 <ol start="4" type="1">
 <li>マークダウンを HTML や docx や epub にする</li>
 </ol>
 <p>そのディレクトリには iida-abstract.md （飯田 さんのアブストラクト）、hamamoto-abstract.md （浜本さんのアブストラクト）などなどがあるは ずです。これらのファイルの中身はつぎのように して観ることが可能です。</p>
-<p>more iida-abstract.md</p>
+<pre><code>more iida-abstract.md</code></pre>
 <p>どこかだ見たような記法で書かれています。これ をマークダウン記法といいます。pandoc を使えば、 この記法でかかれたファイルを、いろんなファイ ル形式に変換できます。</p>
 <p>飯田さんのファイルを docx ファイル（泣く子も だまる MSWord） (output.docx) にしてみましょ う。ターミナルに以下のように打ちこんでくださ い。</p>
-<p>pandoc -o output.docx iida-abstract.md</p>
+<pre><code>pandoc -o output.docx iida-abstract.md</code></pre>
 <p>MSWord で読んでみてください。</p>
-<p>“-o output.docx” の部分を “-o output.html” に すれば、HTML のファイル (output.html) が、 “-o output.epub” にすれば Epub のファイルがで きあがります。たとえば：</p>
-<p>pandoc -o output.html iida-abstract.md</p>
+<p><code>-o output.docx</code> の部分を <code>-o output.html</code> に すれば、HTML のファイル (output.html) が、 <code>-o output.epub</code> にすれば Epub のファイルがで きあがります。たとえば：</p>
+<pre><code>pandoc -o output.html iida-abstract.md</code></pre>
 <p>文献も処理できます。浜本さんの論文には文献が 引用されています。ターミナルに次のように打ち こんでください。</p>
-<p>pandoc -o output.docx –citeproc –bibliography=hamamoto.bib hamamoto-abstract.md</p>
-<p>これで文献表つきの output.docx ができあがりま す。</p>
+<pre><code>pandoc -o output.docx --citeproc --bibliography=hamamoto.bib hamamoto-abstract.md</code></pre>
+<p>これで文献表つきの output.docx ができあがります。</p>
+<h1 id="exernal-links"><span class="header-section-number">2</span> Exernal Links</h1>
+<ul>
+<li><a href="https://shikasen-engineer.com/convert_md_to_docxnpdf_by_pandoc/">pandocでmarkdownファイルをwordやpdfへ変換する</a>
+<ul>
+<li>Windows 上での Pandoc の使いかた</li>
+<li>Windows 上での latex のインストールの仕方</li>
+</ul></li>
+</ul>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>powershell の起動の仕方がわからない方は、 <a href="shell.html">「Powershell の起動の仕方」</a> をおよみください<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
 </body>
 </html>
