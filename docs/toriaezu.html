@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Satoshi Nakagawa" />
+  <title>とりあえず</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+
+
+h1 {
+border-left: 8px ridge #000000;
+border-bottom: 4px ridge #000000;
+}
+h2 {
+border-left: 6px solid #000000;
+}
+h3 {
+border-left: 6px double #000000;
+}
+
+
+p, li, code, table {
+font-family: monospace;
+word-break: break-all;
+}
+
+p {
+text-align: justify;
+}
+
+p {
+text-indent: 1em;
+}
+
+strong {
+text-decoration: underline;
+}
+
+.box3 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #2c2c2f;
+background: #cde4ff;  }
+.box3 p {
+margin: 0; padding: 0;
+}
+.box8 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+.box8 p {
+margin: 0; padding: 0;
+}
+.box27 {
+position: relative;
+margin: 2em 0;
+padding: 0.5em 1em;
+border: solid 3px #62c1ce;
+}
+.box27 .box-title {
+position: absolute;
+display: inline-block;
+top: -27px;
+left: -3px;
+padding: 0 9px;
+height: 25px;
+line-height: 25px;
+font-size: 17px;
+background: #62c1ce;
+color: #ffffff;
+font-weight: bold;
+border-radius: 5px 5px 0 0;
+}
+.box27 p {
+margin: 0; padding: 0;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">とりあえず</h1>
+<p class="author">Satoshi Nakagawa</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#はじめに"><span class="toc-section-number">1</span> はじめに</a></li>
+<li><a href="#作業を開始する"><span class="toc-section-number">2</span> 作業を開始する</a></li>
+<li><a href="#編集を開始する"><span class="toc-section-number">3</span> 編集を開始する</a></li>
+<li><a href="#別のコンピューターで作業する"><span class="toc-section-number">4</span> 別のコンピューターで作業する</a></li>
+<li><a href="#というわけで"><span class="toc-section-number">5</span> というわけで</a></li>
+</ul>
+</nav>
+<h1 id="はじめに"><span class="header-section-number">1</span> はじめに</h1>
+<p>とにかく始めましょう。 ブランチさえ切らない方法を紹介します。</p>
+<h1 id="作業を開始する"><span class="header-section-number">2</span> 作業を開始する</h1>
+<p>ホームディレクトリに移動して、 github のリポジトリをクローンします。 そして、そのディレクトリに移動します。</p>
+<pre><code>cd
+git clone https://github.com/merapano/naturalism/
+cd naturalism/</code></pre>
+<h1 id="編集を開始する"><span class="header-section-number">3</span> 編集を開始する</h1>
+<p><code>iida-paper.md</code> をつくって、 エディットをはじめます。 適当なところで、<code>add</code> して <code>commit</code> します。</p>
+<pre><code>edit iida-paper.md
+【エディットする】
+git add iida-paper.md
+git commit -m &quot;Create my paper&quot;</code></pre>
+<p>またエディットして、 適当なところで（1行のメッセージであらわせるような変更がおわったら） <code>add</code> して <code>commit</code> します。</p>
+<pre><code>【エディットする】
+git add iida-paper.md
+git commit -m &quot;Write the aim of the paper&quot;</code></pre>
+<p>仕上げです。 他の人の変更を取りこんだ上で、<code>push</code> します。</p>
+<pre><code>git pull
+git push</code></pre>
+<h1 id="別のコンピューターで作業する"><span class="header-section-number">4</span> 別のコンピューターで作業する</h1>
+<p>別のコンピューターにうつり、 まだ作業ディレクトリを切っていなければ、 クローンします。 作業ディレクトリに移動して、 編集します。 <code>add</code> して <code>commit</code> します。</p>
+<p>さいごに <code>pull</code> して、 <code>push</code> します。</p>
+<h1 id="というわけで"><span class="header-section-number">5</span> というわけで</h1>
+<p>以上の作業をつづけて github での作業となります。</p>
+</body>
+</html>

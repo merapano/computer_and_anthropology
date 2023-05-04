@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Satoshi Nakagawa" />
+  <title>一人で git で遊ぶ</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+
+
+h1 {
+border-left: 8px ridge #000000;
+border-bottom: 4px ridge #000000;
+}
+h2 {
+border-left: 6px solid #000000;
+}
+h3 {
+border-left: 6px double #000000;
+}
+
+
+p, li, code, table {
+font-family: monospace;
+word-break: break-all;
+}
+
+p {
+text-align: justify;
+}
+
+p {
+text-indent: 1em;
+}
+
+strong {
+text-decoration: underline;
+}
+
+.box3 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #2c2c2f;
+background: #cde4ff;  }
+.box3 p {
+margin: 0; padding: 0;
+}
+.box8 {
+padding: 0.5em 1em;
+margin: 2em 0;
+color: #232323;
+background: #fff8e8;
+border-left: solid 10px #ffc06e;
+}
+.box8 p {
+margin: 0; padding: 0;
+}
+.box27 {
+position: relative;
+margin: 2em 0;
+padding: 0.5em 1em;
+border: solid 3px #62c1ce;
+}
+.box27 .box-title {
+position: absolute;
+display: inline-block;
+top: -27px;
+left: -3px;
+padding: 0 9px;
+height: 25px;
+line-height: 25px;
+font-size: 17px;
+background: #62c1ce;
+color: #ffffff;
+font-weight: bold;
+border-radius: 5px 5px 0 0;
+}
+.box27 p {
+margin: 0; padding: 0;
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">一人で git で遊ぶ</h1>
+<p class="author">Satoshi Nakagawa</p>
+<p class="date">2022-04-20</p>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#はじめに"><span class="toc-section-number">1</span> はじめに</a></li>
+<li><a href="#ローカルな作業場所"><span class="toc-section-number">2</span> ローカルな作業場所</a></li>
+<li><a href="#中間の舞台-stage-とローカルリポジトリ"><span class="toc-section-number">3</span> 中間の舞台 (stage) とローカルリポジトリ</a></li>
+<li><a href="#ブランチ"><span class="toc-section-number">4</span> ブランチ</a></li>
+<li><a href="#おまけ便利なコマンド"><span class="toc-section-number">5</span> おまけ：便利なコマンド</a></li>
+</ul>
+</nav>
+<h1 id="はじめに"><span class="header-section-number">1</span> はじめに</h1>
+<p>git は複数人でプログラム （あるいは文章）を作ることを目的として作られた プログラムです。</p>
+<p>わたしは 基本的に git を 「お一人様 git」としてしか使っていません。 それでも git はとても役にたつプログラムです。 「お一人様 git 」の使い方を、今回と次回のメールでお伝えします。</p>
+<p>まずは先日 clone してつくった naturalism ディ レクトリ（「ローカルの作業場所」）の中にはいっ てください（<code>cd naturalism/</code>）。</p>
+<p>しばらく GitHub にある <code>naturalism</code> リポジト リ（「リモート・リポジトリ」）を忘れてくださ い。このメールではローカルな作業場所での作業 の仕方を説明します。</p>
+<h1 id="ローカルな作業場所"><span class="header-section-number">2</span> ローカルな作業場所</h1>
+<p>「ローカルな作業場所」とは、あなたの手元のコ ンピューターの <code>naturalism/</code> ディレクトリです。 その中身をよく見ると <code>.git/</code> という（サブ）ディ レクトリがあるのがわかると思います。（ウィン ドウズではドットで始まるファイル／ディレクト リを見るのは難しいと聞いたことがあります。見 当たらなくても、「そのような（隠し）ディレク トリがあるんだろう」として、以下の話を聞いて ください）。</p>
+<p>この <code>.git/</code> サブディレクトリ以下は 決してさわらないでください。 ここに（リモート・リポジトリに対応する）リポジトリがあります。 これを「ローカル・リポジトリ」と呼びます。</p>
+<p>「ローカルな作業場所」でする作業（このメール で述べること）とは、そのディレクトリ内にある ファイルを編集して、それらの変更箇所をローカ ルなリポジトリに「コミットする／チェックイン する」ことです。</p>
+<h1 id="中間の舞台-stage-とローカルリポジトリ"><span class="header-section-number">3</span> 中間の舞台 (stage) とローカルリポジトリ</h1>
+<p>git の一つの捉え方は「執筆の際の心変わりを許 す」プログラムと言えます。論文やプログラムは、 ある目論見で書き始めても、「あ・やっぱりこう ではない」と思うことがよくあります。そのよう な心変わりに対処できるのが git というプログラ ムです。</p>
+<p>心変わり対策の第１弾が「中間の舞台」の設置で す。<em>中間</em> とは「ローカルな作業場所」 と「ローカルなリポジトリ」の「中間」という意 味です。変更をローカルなリポジトリにコミット する前に、 並べておく場所です。</p>
+<p>中間の舞台に登録するには <code>git add</code> コマンドを つかいます。</p>
+<p>この中間舞台があることにより、最終的なローカルリポジトリに 登録するまえに考えることができます。</p>
+<p>そして納得がいけば <code>git commit</code> コマンドで ローカルリポジトリに変更箇所をコミットします。</p>
+<p>そして、コミットした後でも無理矢理に その変更を「なかったこと」にするコマンドも用意されています。</p>
+<p>このへんの「やり直しコマンド」については、 git にもっとなれてからのほうがいいでしょう。 ここでは説明しません。</p>
+<p>というわけで、（やり直しを考えなければ） <code>foo.md</code> というファイルの変更は、 まず <code>git add foo.md</code> で中間舞台に登録して、 つづいて、 <code>git commit foo.md</code> でローカルリポジトリに登録する、 という手順で行なうことになります。 （commit するときにメッセージが要求されます） メッセージをあとで入力するのが面倒であれば、 <code>git commit foo.md -m &quot;...&quot;</code> とします。 <code>...</code> の部分にメッセージをかきます。</p>
+<h1 id="ブランチ"><span class="header-section-number">4</span> ブランチ</h1>
+<p>中間舞台とリポジトリでの <em>やり直し</em> ではない 方法、 とっておきの git の「心変わり」対策をお教えします。 それは「ブランチ」という考え方です。 実験的なブランチをつくって、そこで作業をして、 納得すれば、 そのブランチの作業をメインの流れに統合します。</p>
+<pre><code>     M1                     M2
+---- o ----------------------o---
+     |                       |
+      +----o ---- o ----o----+
+           T1    T2     T3</code></pre>
+<figure>
+<img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8IS0tIEdlbmVyYXRlZCBieSBncmFwaHZpeiB2ZXJzaW9uIDIuNDAuMSAoMjAxNjEyMjUuMDMwNCkKIC0tPgo8IS0tIFRpdGxlOiBHIFBhZ2VzOiAxIC0tPgo8c3ZnIHdpZHRoPSI1MTRwdCIgaGVpZ2h0PSIxMDVwdCIKIHZpZXdCb3g9IjAuMDAgMC4wMCA1MTMuOTggMTA0Ljc1IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KPGcgaWQ9ImdyYXBoMCIgY2xhc3M9ImdyYXBoIiB0cmFuc2Zvcm09InNjYWxlKDEgMSkgcm90YXRlKDApIHRyYW5zbGF0ZSg0IDEwMC43NDgpIj4KPHRpdGxlPkc8L3RpdGxlPgo8cG9seWdvbiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9InRyYW5zcGFyZW50IiBwb2ludHM9Ii00LDQgLTQsLTEwMC43NDggNTA5Ljk4MjcsLTEwMC43NDggNTA5Ljk4MjcsNCAtNCw0Ii8+CjwhLS0gTTEgLS0+CjxnIGlkPSJub2RlMSIgY2xhc3M9Im5vZGUiPgo8dGl0bGU+TTE8L3RpdGxlPgo8ZWxsaXBzZSBmaWxsPSIjMDAwMGZmIiBzdHJva2U9IiMwMDAwZmYiIGN4PSIyNS45OTc3IiBjeT0iLTU2Ljc0OCIgcng9IjI1Ljk5NTQiIHJ5PSIyNS45OTU0Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI1Ljk5NzciIHk9Ii01My4wNDgiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCIgZmlsbD0iI2ZmZmZmZiI+TTE8L3RleHQ+CjwvZz4KPCEtLSBNMiAtLT4KPGcgaWQ9Im5vZGUyIiBjbGFzcz0ibm9kZSI+Cjx0aXRsZT5NMjwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9IiMwMDAwZmYiIHN0cm9rZT0iIzAwMDBmZiIgY3g9IjQ3OS45ODUiIGN5PSItNTUuNzQ4IiByeD0iMjUuOTk1NCIgcnk9IjI1Ljk5NTQiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDc5Ljk4NSIgeT0iLTUyLjA0OCIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIiBmaWxsPSIjZmZmZmZmIj5NMjwvdGV4dD4KPC9nPgo8IS0tIE0xJiM0NTsmZ3Q7TTIgLS0+CjxnIGlkPSJlZGdlMSIgY2xhc3M9ImVkZ2UiPgo8dGl0bGU+TTEmIzQ1OyZndDtNMjwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgZD0iTTUxLjQ3MDksLTYzLjY5M0M1Ny41MTE4LC02NS4xNzk2IDYzLjk1NTYsLTY2LjYzNTQgNjkuOTk1NCwtNjcuNzQ4IDEyMS4zOTA0LC03Ny4yMTU1IDEzNC40ODM2LC04MS43NDggMTg2Ljc0MzQsLTgxLjc0OCAxODYuNzQzNCwtODEuNzQ4IDE4Ni43NDM0LC04MS43NDggMzk0LjIzOTMsLTgxLjc0OCA0MTEuOTc2NSwtODEuNzQ4IDQzMC45MjM5LC03Ni41OSA0NDYuNDg0NiwtNzAuODY4OCIvPgo8cG9seWdvbiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iNDQ4LjEzNzksLTczLjk4MDMgNDU2LjE3NDUsLTY3LjA3NjMgNDQ1LjU4NjYsLTY3LjQ2MTcgNDQ4LjEzNzksLTczLjk4MDMiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMjkwLjQ5MTMiIHk9Ii04NS41NDgiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCIgZmlsbD0iIzAwMDAwMCI+bWVyZ2UvbnRlc3Q8L3RleHQ+CjwvZz4KPCEtLSBUMSAtLT4KPGcgaWQ9Im5vZGUzIiBjbGFzcz0ibm9kZSI+Cjx0aXRsZT5UMTwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9IiNhZGQ4ZTYiIHN0cm9rZT0iI2FkZDhlNiIgY3g9IjE4Ni43NDM0IiBjeT0iLTI4Ljc0OCIgcng9IjIyLjk5ODciIHJ5PSIyMi45OTg3Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjE4Ni43NDM0IiB5PSItMjUuMDQ4IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiIGZpbGw9IiMwMDAwMDAiPlQxPC90ZXh0Pgo8L2c+CjwhLS0gTTEmIzQ1OyZndDtUMSAtLT4KPGcgaWQ9ImVkZ2UyIiBjbGFzcz0iZWRnZSI+Cjx0aXRsZT5NMSYjNDU7Jmd0O1QxPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwMDAwIiBkPSJNNTEuODI0MywtNTIuMjQ5M0M3OS42MTAxLC00Ny40MDkzIDEyMy44NjQsLTM5LjcwMDggMTU0LjA1NTgsLTM0LjQ0MTgiLz4KPHBvbHlnb24gZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIiBwb2ludHM9IjE1NC44NDc1LC0zNy44NTY3IDE2NC4wOTg1LC0zMi42OTI0IDE1My42NDYyLC0zMC45NjA1IDE1NC44NDc1LC0zNy44NTY3Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEwNy45OTU0IiB5PSItNTIuNTQ4IiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiIGZpbGw9IiMwMDAwMDAiPmNvICYjNDU7Yi9udGVzdDwvdGV4dD4KPC9nPgo8IS0tIFQyIC0tPgo8ZyBpZD0ibm9kZTQiIGNsYXNzPSJub2RlIj4KPHRpdGxlPlQyPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0iI2FkZDhlNiIgc3Ryb2tlPSIjYWRkOGU2IiBjeD0iMjkwLjQ5MTMiIGN5PSItMjIuNzQ4IiByeD0iMjIuOTk4NyIgcnk9IjIyLjk5ODciLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMjkwLjQ5MTMiIHk9Ii0xOS4wNDgiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCIgZmlsbD0iIzAwMDAwMCI+VDI8L3RleHQ+CjwvZz4KPCEtLSBUMSYjNDU7Jmd0O1QyIC0tPgo8ZyBpZD0iZWRnZTMiIGNsYXNzPSJlZGdlIj4KPHRpdGxlPlQxJiM0NTsmZ3Q7VDI8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIGQ9Ik0yMDkuNTExMywtMjcuNDMxM0MyMjMuNTY1OSwtMjYuNjE4NCAyNDEuODM1MiwtMjUuNTYxOSAyNTcuNDYzMywtMjQuNjU4MSIvPgo8cG9seWdvbiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMjU3Ljk5NTMsLTI4LjEzMzIgMjY3Ljc3NjUsLTI0LjA2MTYgMjU3LjU5MTEsLTIxLjE0NDkgMjU3Ljk5NTMsLTI4LjEzMzIiLz4KPC9nPgo8IS0tIFQzIC0tPgo8ZyBpZD0ibm9kZTUiIGNsYXNzPSJub2RlIj4KPHRpdGxlPlQzPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0iI2FkZDhlNiIgc3Ryb2tlPSIjYWRkOGU2IiBjeD0iMzk0LjIzOTMiIGN5PSItMjguNzQ4IiByeD0iMjIuOTk4NyIgcnk9IjIyLjk5ODciLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzk0LjIzOTMiIHk9Ii0yNS4wNDgiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCIgZmlsbD0iIzAwMDAwMCI+VDM8L3RleHQ+CjwvZz4KPCEtLSBUMiYjNDU7Jmd0O1QzIC0tPgo8ZyBpZD0iZWRnZTQiIGNsYXNzPSJlZGdlIj4KPHRpdGxlPlQyJiM0NTsmZ3Q7VDM8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIGQ9Ik0zMTMuMjU5MywtMjQuMDY0N0MzMjcuMzEzOSwtMjQuODc3NSAzNDUuNTgzMiwtMjUuOTM0MSAzNjEuMjExMywtMjYuODM3OSIvPgo8cG9seWdvbiBmaWxsPSIjMDAwMDAwIiBzdHJva2U9IiMwMDAwMDAiIHBvaW50cz0iMzYxLjMzOTEsLTMwLjM1MSAzNzEuNTI0NSwtMjcuNDM0MyAzNjEuNzQzMywtMjMuMzYyNyAzNjEuMzM5MSwtMzAuMzUxIi8+CjwvZz4KPCEtLSBUMyYjNDU7Jmd0O00yIC0tPgo8ZyBpZD0iZWRnZTUiIGNsYXNzPSJlZGdlIj4KPHRpdGxlPlQzJiM0NTsmZ3Q7TTI8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIGQ9Ik00MTYuMzIxLC0zNS43MDEyQzQyNS4wODYsLTM4LjQ2MTEgNDM1LjM4MDgsLTQxLjcwMjggNDQ1LjEwNjYsLTQ0Ljc2NTMiLz4KPHBvbHlnb24gZmlsbD0iIzAwMDAwMCIgc3Ryb2tlPSIjMDAwMDAwIiBwb2ludHM9IjQ0NC4zNTg0LC00OC4xOTkxIDQ1NC45NDc5LC00Ny44NjQyIDQ0Ni40NjA4LC00MS41MjIyIDQ0NC4zNTg0LC00OC4xOTkxIi8+CjwvZz4KPC9nPgoKPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC4wMDAwMDAsMTcuMDAwMDAwKSBzY2FsZSgwLjEwMDAwMCwtMC4xMDAwMDApIgpmaWxsPSIjMDAwMDAwIiBzdHJva2U9Im5vbmUiPgo8cGF0aCBkPSJNMjEgMTU3IGMtMjkgLTM1IC0xNiAtOTcgMjAgLTk3IDE1IDAgMTkgLTUgMTUgLTE2IC0zIC05IC02IC0yMCAtNgotMjUgMCAtNSAtNCAtOSAtMTAgLTkgLTE0IDAgLTEyIDI3IDMgMzMgNiAzIDIgNiAtMTAgNiAtMzAgMSAtMzEgLTM1IC0zIC00NAoyOCAtOSA0NyA5IDU1IDUxIDMgMjAgOSA0MiAxMiA1MCAzIDggLTEgMTQgLTExIDE0IC05IDAgLTE2IC04IC0xNiAtMTkgMCAtMjYKLTE1IC0zNCAtMzAgLTE2IC0xMyAxNiAtNiA0OCAxNiA3MCAxNCAxMyAxMyAxNSAtNCAxNSAtMTEgMCAtMjUgLTYgLTMxIC0xM3oiLz4KPHBhdGggZD0iTTgwIDE1MCBjMCAtMTMgNSAtMjAgMTMgLTE3IDYgMiAxMiAxMCAxMiAxNyAwIDcgLTYgMTUgLTEyIDE4IC04IDIKLTEzIC01IC0xMyAtMTh6Ii8+CjxwYXRoIGQ9Ik0zNDcgMTY0IGMtMTMgLTEzIC03IC0yNCAxNCAtMjQgMTEgMCAxOSA1IDE3IDEyIC01IDE0IC0yMiAyMSAtMzEKMTJ6Ii8+CjxwYXRoIGQ9Ik0xMDMgODUgYy05IC00MCAtOCAtNDUgOCAtNDUgMTMgMCAxOSA5IDIxIDMzIDIgMjQgNyAzMSAyMSAyOSAxMCAtMgoxNyAzIDE3IDEzIDAgMTAgLTkgMTUgLTI4IDE1IC0yNiAwIC0zMCAtNSAtMzkgLTQ1eiIvPgo8cGF0aCBkPSJNMTc1IDEwMSBjLTI0IC00OCAtMTMgLTU5IDY0IC02MCA2MyAtMSA2OSAxIDc5IDI1IDE1IDMxIDE1IDY0IDEgNjQKLTYgMCAtOCAtOCAtNSAtMTggNCAtMTAgLTEgLTI3IC0xMCAtMzggLTE0IC0xOCAtMTUgLTE3IC05IDE5IDUgMjkgMyAzNyAtOQozNyAtOSAwIC0xOCAtMTMgLTIyIC0zNSAtMyAtMTkgLTEwIC0zNSAtMTQgLTM1IC00IDAgLTQgMTYgMCAzNSA4IDM1IDggMzUKLTI2IDM1IC0yNyAwIC0zNiAtNiAtNDkgLTI5eiBtNDcgLTYgYy01IC0yOCAtMjIgLTQ0IC0yMiAtMjEgMCAyMSAxMSA0NiAyMAo0NiA0IDAgNSAtMTEgMiAtMjV6Ii8+CjxwYXRoIGQ9Ik0zNDAgMTE2IGMwIC03IC0zIC0yOCAtNiAtNDUgLTYgLTI2IC0zIC0zMSAxMyAtMzEgMTAgMCAyNSA2IDMyIDEyCjExIDEwIDEzIDEwIDcgMSAtNSAtOSAzIC0xMyAyOCAtMTMgMjUgMCAzNiA0IDM2IDE1IDAgOCAtNCAxNSAtMTAgMTUgLTUgMAotMTAgLTQgLTEwIC0xMCAwIC01IC01IC0xMCAtMTEgLTEwIC02IDAgLTIgMTIgOSAyOCAzNiA1MSAzNiA1MiAtMiA1MiAtMjUgMAotMzYgLTQgLTM2IC0xNSAwIC04IDUgLTE1IDEwIC0xNSA2IDAgMTAgNSAxMCAxMiAwIDYgMyA5IDYgNiA5IC0xMCAtMTkgLTQ2Ci0zOSAtNTIgLTE3IC00IC0xOCAtMSAtMTMgMzAgNiAyNyA0IDM0IC05IDM0IC04IDAgLTE1IC02IC0xNSAtMTR6Ii8+CjxwYXRoIGQ9Ik00NzIgMTE4IGMtNyAtNyAtMTIgLTI3IC0xMiAtNDYgMCAtMzAgMiAtMzMgMjcgLTMwIDE3IDIgMzIgMTIgMzkKMjcgNyAxMyAxOCAyOCAyNiAzMyAxMCA4IDkgOCAtNCA0IC0xMiAtMyAtMTggMCAtMTggOSAwIDE4IC00MSAyMCAtNTggM3ogbTI5Ci01MSBjLTEzIC0xMyAtMTUgMTEgLTQgNDAgNyAxNiA4IDE1IDExIC02IDIgLTEzIC0xIC0yOCAtNyAtMzR6Ii8+CjwvZz4KPC9zdmc+Cg==" alt="図：ブランチを切る" /><figcaption>図：ブランチを切る</figcaption>
+</figure>
+<!--
+
+```mermaid
+gitGraph BT;
+commit
+branch test
+checkout test
+commit
+commit
+commit
+checkout main
+merge test
+
+```
+
+-->
+<p>A1 まで作業をしているとしましょう。 そこで「こうしようか、ああしようか」迷ったとします。 そのような場合は、 迷わずブランチをつくりましょう（「ブランチを切る」というそうです）。 名前はなんでもいいですが、 ここでは <code>test</code> という名前としましょう。 <code>git branch test</code> で新しいブランチ test が作成されます。 そして、<code>git checkout test</code> で、 そのブランチに移動できます。 もとの状況にもどるには <code>git checkout main</code> とします。 （ブランチのもとになるのだから「幹」だろうと 思っていたかもしれませんが、 じつは、オリジナルの状況も <code>main</code> という名前のブランチだったのです）</p>
+<p>なお、 以上の作業（<code>git branch test</code> および <code>git checkout test</code>）は、 <code>git checkout -b test</code> でも可能です。</p>
+<p>さて、test ブランチで作業をして、 アッドとコミットを3回したとしましょう （T1、T2 および T3）。</p>
+<p>この作業に満足ならばメインのブランチに統合します。 まず、メインのブランチに移動します (<code>git checkout main</code>)。 作業ディレクトリは M1 の状態となります。 そして、test ブランチをメインに融合（マージ）します (<code>git merge test</code>)。 メインの状況は M2 となります。</p>
+<p>もし、ブランチでの作業が気にいらなければ、 <code>git checkout main</code> でメインに戻り（M1）、 以降は test ブランチには触れないようにすればいいでしょう。 削除する必要はありませんが、 どうしても削除したければ <code>git branch -d test</code> で、 test ブランチは削除されます。</p>
+<p><code>git add</code> や <code>git commit</code> したあとに 「やり直し」をするより、 ブランチをつかって、 さまざまな「やり直し」をするほうがわかりやすいと思います。 ここでは「ブランチ全体を採用するか否か」の場合だけを 取り上げましたが、 もっと細かく採用部分を指定できます （「<a href="cherrypicking.html">さくらんぼ摘み</a>」といいます）— その詳しいやりかたは、後日紹介します。</p>
+<h2 id="心得"><span class="header-section-number">4.1</span> 心得</h2>
+<p>「まよったらブランチを切る」という書き方をしましたが、 じつは、 git を使うときには、なにはともあれ「ブランチを切る」と 覚えておいたほうがいいでしょう。 安全のため、 そして後のさくらんぼ摘みのために、 とにかく、ブランチを切ってから作業をしましょう。</p>
+<h1 id="おまけ便利なコマンド"><span class="header-section-number">5</span> おまけ：便利なコマンド</h1>
+<p>add による中間の舞台への登録のやりなおし、 commit によるリポジトリへの登録のやりなおしについては、 別に述べます。 ここではそれとは別の、けっこうよく使うコマンドを紹介します。</p>
+<h2 id="stash-わきにおいておく"><span class="header-section-number">5.1</span> stash （「わきにおいておく」）</h2>
+<p>じっさいにエディタで作業をしたけど、 add したくなくなったとします。 こんな時は <code>git stash file_name</code> としてください。 ファイルが中間の舞台の状況にもどります。 編集した部分はいらないでしょうから、 <code>git stash clear</code> してください。</p>
+<h2 id="checkout"><span class="header-section-number">5.2</span> checkout</h2>
+<p>stash は、いわば、中間の舞台にあるものを 作業ディレクトリにとりもどすコマンドでした。 リポジトリにあるものを作業ディレクトリに呼び戻すには <code>git checkout</code> をつかいます。</p>
+<p>まちがえてファイルを削除してしまったとしましょう。 <code>git checkout file_name</code> で、 そのファイルのリポジトリにあるバージョンがよみがえります。</p>
+</body>
+</html>

@@ -30,6 +30,7 @@ author: "Satoshi Nakagawa"
 
 # コラム
 
+- [キーボード賛歌](keyboard.md)
 - [powershell を起動する](shell.md)
 - [エディタを選ぶ](editor.md)
 - [さくらんぼ摘み](cherrypicking.md)
