@@ -45,8 +45,9 @@ OS は [[Unix]] ではなかったので、
 - [IMB Personal Computer (Wikipedia)][ibm]
 - [CP/M (Wikipedia ja)][cpm]
 - [DEC デジタル・イクィップメント・コーポレーション][dec]
+- [(TeX Wiki) 変換ツール][conv]
 
-
+[conv]:https://texwiki.texjp.org/?%E5%A4%89%E6%8F%9B%E3%83%84%E3%83%BC%E3%83%AB#oe747d31
 [ibm]:https://en.wikipedia.org/wiki/IBM_Personal_Computer
 [cpm]:https://ja.wikipedia.org/wiki/CP/M
 [dec]:https://ja.wikipedia.org/wiki/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A4%E3%82%AF%E3%82%A4%E3%83%83%E3%83%97%E3%83%A1%E3%83%B3%E3%83%88%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%9D%E3%83%AC%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3
