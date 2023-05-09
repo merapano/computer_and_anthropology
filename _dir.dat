@@ -25,5 +25,6 @@ my_cv:わたしの履歴書::
 pandoc:pandoc の使い方
 shell:shell 万歳
 toriaezu:
-writing_papers:わたしの論文の書き方::markdown およびその他のプログラムをつかう
-
+# writing_papers:わたしの論文の書き方::markdown およびその他のプログラムをつかう
+markdown-ex:わたしの論文の書き方:私的拡張 Markdown::\
+  わたしの論文、発表、授業用の markdown 拡張について:P
