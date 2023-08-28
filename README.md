@@ -3,6 +3,16 @@ title: README
 author: "Satoshi Nakagawa"
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F5QJMGG75W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F5QJMGG75W');
+</script>
+
 人類学者向けに書いたコンピューター入門です。 
 
 # メインの流れ（ここだけ読んでください）
