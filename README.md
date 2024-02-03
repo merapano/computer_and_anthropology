@@ -39,3 +39,9 @@ author: "Satoshi Nakagawa"
 - [Emacs をつかいこなす](emacs.md) --- エディタのなかのエディタ、
   Emacs をつかいこなします
 
+# 中川敏の個人的ページ
+
+- [私の履歴書](my_cv.md)
+- [私の論文の書き方](markdown-ex.md) Markdown 私的拡張仕様 --- 
+  １つのファイルからスライド、ハンドアウト（板書）、提出原稿をつくる
+  ために

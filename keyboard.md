@@ -5,6 +5,10 @@ author: Satoshi Nakagawa
 
 # はじめに
 
+マウスを使わなければ使わないほど能率があがります。
+トラックボールをつかえという意味ではありません。
+キーボードをつかいましょう、ということです。
+
 # External Links
 
 - [CLI tricks every developer should know][cli-github]
