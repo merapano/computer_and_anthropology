@@ -7,6 +7,8 @@ author: Satoshi Nakagawa
 
 # 先史時代
 
+わたしがコンピューター
+
 # runoff on PDP-11
 
 1980年代初頭に
