@@ -7,6 +7,7 @@
 
 index:目次:::P
 README:README:::V
+intro:序:::P
 chromebook:クロームブック (Chromebook) をつかってみる:::V
 download:ダウンロード:::V
 draft:「覗き見の美徳」ドラフト::markdown のひな形:V
@@ -21,9 +22,8 @@ github-owner:github のオーナーとなる:::P
 github-member:だれかの github のメンバーとなる:::P
 graphviz:Graphviz のつかいかた:マウスをつかわずグラフを描く (1)::P
 mermaid:Mermaid のつかいかた:マウスをつかわずグラフを描く (2)::V
-intro:序:::P
 keyboard:キーワード賛歌:::P
-markdown:Markdown:::P
+markdown:Markdownで文章を書く:::P
 markdown-alt::::P
 markdown-code::::P
 my_cv:わたしの履歴書:::V
