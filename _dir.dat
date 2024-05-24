@@ -1,30 +1,35 @@
-# pubdir:/home/satoshi/Output/github/computer_and_anthropology
+#title: コンピューターをつかって人類学する
+# author: Satoshi Nakagawa
+# dirno: 001
+# version: ver0.01
+# root:/anthrop/class-md/computer_and_anthropology
+#end
 
-README:README:::P
-chromebook:クロームブック (Chromebook) をつかってみる:::
-download:ダウンロード
-draft:「覗き見の美徳」ドラフト::markdown のひな形:
-editor:エディタ::Windows や iOS でのエディタ
-git:git の使い方::
-git-local:ローカルでの git の使い方
-git-log: git のログ:
-github:github って何？
-github-alone:ひとりで github:
-github-fork:github をフォークする::だれかの github をつかう仕方
-github-owner:github のオーナーとなる::
-github-member:だれかの github のメンバーとなる
-graphviz:Graphviz のつかいかた:マウスをつかわずグラフを描く (1)
-mermaid:Mermaid のつかいかた:マウスをつかわずグラフを描く (2)
-index:README
-intro:序
-keyboard:キーワード賛歌
-markdown:Markdown
-markdown-alt:
-markdown-code:
-my_cv:わたしの履歴書::
-pandoc:pandoc の使い方
-shell:shell 万歳
-toriaezu:
+index:目次:::P
+README:README:::V
+chromebook:クロームブック (Chromebook) をつかってみる:::V
+download:ダウンロード:::V
+draft:「覗き見の美徳」ドラフト::markdown のひな形:V
+editor:エディタ::Windows や iOS でのエディタ:P
+git:git の使い方:::P
+git-local:ローカルでの git の使い方:::P
+git-log: git のログ:::P
+github:github って何？:::P
+github-alone:ひとりで github:::P
+github-fork:github をフォークする::だれかの github をつかう仕方:P
+github-owner:github のオーナーとなる:::P
+github-member:だれかの github のメンバーとなる:::P
+graphviz:Graphviz のつかいかた:マウスをつかわずグラフを描く (1)::P
+mermaid:Mermaid のつかいかた:マウスをつかわずグラフを描く (2)::V
+intro:序:::P
+keyboard:キーワード賛歌:::P
+markdown:Markdown:::P
+markdown-alt::::P
+markdown-code::::P
+my_cv:わたしの履歴書:::V
+pandoc:pandoc の使い方:::V
+shell:shell 万歳:::P
+toriaezu::::P
 # writing_papers:わたしの論文の書き方::markdown およびその他のプログラムをつかう
 markdown-ex:わたしの論文の書き方:私的拡張 Markdown::\
   わたしの論文、発表、授業用の markdown 拡張について:P
