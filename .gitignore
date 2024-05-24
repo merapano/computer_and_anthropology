@@ -7,5 +7,7 @@
 *.tex
 *.rtf
 *.old
-docs/*
 pdf.d/*
+_makefile
+index.md
+SUMMARY.md
