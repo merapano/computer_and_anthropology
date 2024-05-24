@@ -45,3 +45,4 @@ author: "Satoshi Nakagawa"
 - [私の論文の書き方](markdown-ex.md) Markdown 私的拡張仕様 --- 
   １つのファイルからスライド、ハンドアウト（板書）、提出原稿をつくる
   ために
+
