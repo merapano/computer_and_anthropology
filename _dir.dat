@@ -1,12 +1,12 @@
 #title: コンピューターをつかって人類学する
 # author: Satoshi Nakagawa
 # dirno: 001
-# version: ver0.01
+# version: ver0.0.1
 # root:/anthrop/class-md/computer_and_anthropology
 #end
 
 index:目次:::P
-README:README:::V
+README:いかにしてこの本が生まれたか:::P
 intro:序:::P
 chromebook:クロームブック (Chromebook) をつかってみる:::V
 download:ダウンロード:::V
@@ -31,5 +31,5 @@ pandoc:pandoc の使い方:::V
 shell:shell 万歳:::P
 toriaezu::::P
 # writing_papers:わたしの論文の書き方::markdown およびその他のプログラムをつかう
-markdown-ex:わたしの論文の書き方:私的拡張 Markdown::\
+markdown-ex:わたしの論文の書き方:私的拡張 Markdown:\
   わたしの論文、発表、授業用の markdown 拡張について:P
