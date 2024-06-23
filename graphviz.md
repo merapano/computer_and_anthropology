@@ -9,6 +9,7 @@ author: Satoshi Nakagawa
 
 # Markdown に挿入する
 
+<!---
 ![Alt text](https://g.gravizo.com/svg?
   digraph G {
     size ="4,4";
@@ -22,6 +23,9 @@ author: Satoshi Nakagawa
     B -> A [label="add/\nreset"];
     }
 )
+-->
+
+<!---
 
 ![Alt text](https://g.gravizo.com/svg?
   digraph G {
@@ -41,7 +45,7 @@ author: Satoshi Nakagawa
   }
 )
 
-
+-->
 
 
 # External Links
